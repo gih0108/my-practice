@@ -1,0 +1,41 @@
+-c9과 githib열기
+-c9부터보면 폴더하나를 만든다. sit22005하위 폴더(new folder)
+-cd midterm/(폴더 명, 폴더 만듦)
+- git init (midterm이라는 폴더를 git으로 관리하겠다.)
+-중간고사에 대한 git repository가 있고 sit22005-midterm이 있다고 치면 
+-git repository를 midterm 폴더 안으로 pull
+-숙제를 git add/ git commit -m " "
+-git push를 해서 midterm repository로 밀어넣어준다
+-마지막으로 midterm 파일을 sit22005-midterm으로 push
+
+<실습>
+-ppt 4번 그대로 쳐주면 된다.
+-잘못 타이핑했을 때 복구하는 방법은? git remote remove upstream / git remote -v하면 아무것도 없어진 것을 볼 수 있음. / pull은 땡겨오는 것이므로 한번만 하면 되고 fetch는 뭐가 있는지 보는 것이다.
+-이렇게하면 중간고사 시험문제를 가져온것이다.
+-github에서 저장소에서 생성할 것이다.
+-github에서 new repository 클릭하고 repository name생성(이름은 문제에서 줄 것임)
+-private으로 설정
+-create 클릭
+- c9에서 git remote add origin https://github.com/cbchoi/midterm-test.git 입력
+-git remote -v
+-git push -u  origin master
+-ls 하면 어떤 파일이 들어가있는지 볼 수 있음. 완료
+
+시험 때 할것!!
+c9과 github 열고 로그인하기 -> c9에 들어가서 폴더생성.sit22005 오른쪽 마우스 클릭하여 폴더만들기(new folder)
+-> cd midterm(폴더 명은 주어질 것임, 여기서 midterm이 폴더명, 폴더가 만들어짐) 
+-> git init입력
+-> ppt 4번에 나와있는 거 그대로 입력(처음에 중간고사 문제 가져올때는 교수님이름(cbchoi)과 교수님 github상 링크로 입력해야함. 아마 주어질 것임)
+-> 여기까지가 시험문제 또는 과제를 가져오는 과정
+-> 앞에 과정을 c9에서 거친후 github에 들어가 저장소 생성(new repository클릭한 후 repository name 생성, 문제에서 주어질 것임)
+-> private으로 설정, create 클릭, collaborators 들어가서 교수님 추가
+-> c9에서 git remote add origin https://github.com/gih0108(내 아이디)/midterm-test(repository name).git 입력
+-> git remote -v
+-> git push -u  origin master
+-> ls 하면 어떤 파일이 들어가있는지 볼 수 있음.
+-> 과제 했을 때 처럼 ctrl+s해서 저장한 후 코딩이 완료되면 git add/ git commit -m " "
+-> git push를 해서 midterm repository로 밀어넣어준다.
+-> ls하면 github에 올라간 파일을 확인 할 수 있다.
+-> 시험 중 run할 때는 g++ 파일명..cpp / ./a.out 
+-> 중간중간 계속 저장해주기
+

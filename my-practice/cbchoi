@@ -1,0 +1,58 @@
+#include <iostream>
+#include <fstream>
+
+void print(std::ostream& os)
+{
+    os << "My name is cbchoi";
+}
+
+long factorial(long num)
+{
+    if(num == 1)
+        return 1;
+    else
+        return num * factorial(num-1);
+}
+
+
+int main()
+{
+    int num;
+    std::cout << "Enter a number:";
+    std::cin >> num;
+    
+    std::cout << num << "!=" << factorial(num)<<std::endl;
+    return 0;
+}
+
+//
+#include <iostream>
+#include <fstream>
+
+void print(std::ostream& os)
+{
+    os << "Hello, My Name is cbchoi" << std::endl;
+}
+
+int main()
+{
+    /* console output */
+    print(std::cout);
+    
+    /* file output */
+    std::ofstream fout;
+    fout.open("output.txt");
+    print(fout);
+    fout.close();
+    
+    return 0;
+}
+
+//
+all: 20170919_practice01 20170919_practice02
+
+%: %.cpp
+   g++ -std=c++11 $< -o $@.out
+
+clean: 
+   rm *.out
