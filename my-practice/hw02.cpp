@@ -29,7 +29,7 @@ public: // 구조체 안에서 누구나 쓸 수 있음
 		cout << "나이 : " << age << endl;
 	}
 
-	virtual ~Person(); 
+	virtual ~Person(); //Person 객체 소멸
 };
 
 class Student : public Person { // 구조체 Student안에 구조체 Person이 상속됨
@@ -47,13 +47,16 @@ public:
 		cout << hour << "시간 째 공부하는 중입니다." << endl; 
 	}
 
-	~Student();
+	~Student(); //Student 객체 소멸
 
 };//가상함수 : 포인터 변수가 실제로 가리키는 객체를 참조하여 호출의 대상을 결정함
-Student::~Student() {
+
+
+Student::~Student() { //  ~은 소멸자, 소멸이 됬는지 안됬는지 보여주는 호출문
 	cout << "학생 객체 소멸" << endl;
 }
-Person::~Person() {
+Person::~Person() { //  ~은 소멸자, 소멸이 됬는지 안됬는지 보여주는 호출문
+
 	cout << "사람 객체 소멸" << endl;
 }
 
@@ -64,7 +67,8 @@ int main()
 
 	ptr1->Info(); 
 	ptr1->Study(); //오버라이딩 관계지만 ptr1이 Person에 할당
-	ptr2->Study(); //오버라이딩 관계지만 ptr2가 Student에 할당
+	ptr2->Study(); //오버라이딩 관계지만 ptr2가 Student에 
+	할당
 
 	delete ptr1; // 삭제
 	delete ptr2; // 삭제
