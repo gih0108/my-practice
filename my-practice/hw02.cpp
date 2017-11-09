@@ -12,7 +12,7 @@ public: // 구조체 안에서 누구나 쓸 수 있음
 		age = 21; // 변수 age에는 정수형에 맞는 숫자가 들어감(나이)
 	}//Person 함수 종료
 	
-	Person(char * myname, int myage) : age(myage) { //:은 상속의 의미
+	Person(char * myname, int myage) : age(myage) { //:은 상속의 의미, 인자 전달 받을 시 이 함수로 초기화 됨
 		strcpy(name, myname);//myname을 name에 복사
 	}
 
@@ -22,7 +22,8 @@ public: // 구조체 안에서 누구나 쓸 수 있음
 
 	virtual void Study() { //(가상)함수
 		cout << "공부안하는 중입니다" << endl;
-	}
+	}//오버라이딩. 가상함수를 설정함으로써 이 클래스를 상속받은 Student 객체는 Student객체의 Study를 실행
+
 
 	void Info() { //함수
 		cout << "이름 : " << name << endl;
@@ -36,14 +37,15 @@ class Student : public Person { // 구조체 Student안에 구조체 Person이 �
 private:
 	int grade; //변수선언
 	int hour; //변수선언
-public:
+	
+public://함수 오버로드. 
 	Student() : Person() { //Student함수 안의 Person함수
 		hour = 10;
 		grade = 3;
 	} // Student 함수 안에 hour,grade가 각각 설정되었으면서, Person에서 있었던 것들을 모두 가져옴
 	Student(char * myname, int myage, int mygrade, int myhour) : Person(myname, myage), grade(mygrade), hour(myhour) {}
 
-	void Study() { //가상함수화 됨
+	void Study() { //가상함수화 됨, 오버라이딩. 
 		cout << hour << "시간 째 공부하는 중입니다." << endl; 
 	}
 
@@ -52,6 +54,7 @@ public:
 };//가상함수 : 포인터 변수가 실제로 가리키는 객체를 참조하여 호출의 대상을 결정함
 
 
+//소멸시 소멸자 실행. 
 Student::~Student() { //  ~은 소멸자, 소멸이 됬는지 안됬는지 보여주는 호출문
 	cout << "학생 객체 소멸" << endl;
 }
@@ -63,13 +66,31 @@ Person::~Person() { //  ~은 소멸자, 소멸이 됬는지 안됬는지 보여�
 int main()
 {
 	Person * ptr1 = new Person; //포인터 ptr1에 Person이라는 새로운 객체를 구조체 Person에 생성
-	Person * ptr2 = new Student; // 포인터 ptr2에 Student라는 새로운 객체를 구조체 Person에 생성
+	Person * ptr2 = new Student; //인자전달시 두번째 초기화함수 실행 됨.
+
 
 	ptr1->Info(); 
-	ptr1->Study(); //오버라이딩 관계지만 ptr1이 Person에 할당
+	ptr1->Study(); //오버라이딩 관계지만 ptr1이 Person에 할당,
+	//만약 부모클래스의 오버라이딩된 함수가 가상함수가 아니라면, 여기서 부모클래스의 Study 메소드 호출됨. 
+	//그러나 가상함수가 되어있으므로 현재 포인터가 가리키고 있는 클래스의 Study 함수 불러옴.
+
 	ptr2->Study(); //오버라이딩 관계지만 ptr2가 Student에 
 	할당
 
 	delete ptr1; // 삭제
 	delete ptr2; // 삭제
+	
+	// int age = 17;
+	// char name[] = "Junyoung";
+	// char sName[] = "Jihyun";
+	// int grd = 100;
+	// int hr = 5;
+	
+	// Person jun = Person(name, age);
+	// jun.Info();
+	// jun.Study();
+	
+	// Student std = Student(sName, age, grd, hr);
+	// std.Study();
+
 }
