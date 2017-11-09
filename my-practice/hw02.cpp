@@ -74,8 +74,7 @@ int main()
 	//만약 부모클래스의 오버라이딩된 함수가 가상함수가 아니라면, 여기서 부모클래스의 Study 메소드 호출됨. 
 	//그러나 가상함수가 되어있으므로 현재 포인터가 가리키고 있는 클래스의 Study 함수 불러옴.
 
-	ptr2->Study(); //오버라이딩 관계지만 ptr2가 Student에 
-	할당
+	ptr2->Study(); //오버라이딩 관계지만 ptr2가 Student에 할당
 
 	delete ptr1; // 삭제
 	delete ptr2; // 삭제
