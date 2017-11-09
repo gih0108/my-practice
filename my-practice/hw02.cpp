@@ -67,7 +67,7 @@ int main()
 {
 	Person * ptr1 = new Person; //포인터 ptr1에 Person이라는 새로운 객체를 구조체 Person에 생성
 	Person * ptr2 = new Student; //인자전달시 두번째 초기화함수 실행 됨.
-
+	//동적할당(malloc)이나 new가 나오면 무조건 왼쪽부분에 포인터가 나와야 함.
 
 	ptr1->Info(); 
 	ptr1->Study(); //오버라이딩 관계지만 ptr1이 Person에 할당,
@@ -93,3 +93,6 @@ int main()
 	// std.Study();
 
 }
+
+//new와 delete는 같이 따라오는 경우, 생성자가 오버로딩, 함수가 같은데 받는 타입이 다름, 소멸자(delete)를 넣으면 어떻게 
+//출력결과가 나오는지,,(교수님 단골 문제), 
