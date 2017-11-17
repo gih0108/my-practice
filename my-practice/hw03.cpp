@@ -32,16 +32,16 @@ void Insert(char *data) // Insert라는 함수 선언
 	//앞에 선언된 Node의 head와 tail의 공간이 손상되지 않으면서 Node의 New라는 새로운 공간을 할당해주는 것임.
 	strcpy(New->value, data); // data에 들어온 값을 New의 value라는 메모리 공간에 복사
 	tail->prev->next = New; // head->next = tail에 New 값을 할당
-	New->prev = tail->prev; // head의 공간에는 
-	New->next = tail;
-	tail->prev = New;
-}
+	New->prev = tail->prev; // head의 공간이 New->prev=NULL에 할당
+	New->next = tail; // New라는 공간에 tail이라는 메모리 공간이 새롭게 형성
+	tail->prev = New; // head라는 공간에 New라는 메모리 공간 형성
+} // init에 사용된 변수와 그 기능을 이용하여 insert라는 함수는 생성(New라는 새로운 공간을 할당하여 전에 선언하였던 메모리 공간을 해치지 않음)
 
-void Print_Reverse()
+void Print_Reverse() // Print_reverse함수 선언
 {				
-	Node *Back = tail->prev;
-	while (Back != head) {
-		printf("%s\n", Back->value);
+	Node *Back = tail->prev; // Node가 가리키는 공간에서 Back이라는 포인터 변수에 head라는 메모리 공간 형성
+	while (Back != head) { // Back이 head가 될 때까지 계속 실행하는 반복문
+		printf("%s\n", Back->value); // Back의 value값을 프린트 해줌
 		Back = Back->prev;//ddsds
 	}
 }
