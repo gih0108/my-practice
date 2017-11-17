@@ -42,24 +42,25 @@ void Print_Reverse() // Print_reverse함수 선언
 	Node *Back = tail->prev; // Node가 가리키는 공간에서 Back이라는 포인터 변수에 head라는 메모리 공간 형성
 	while (Back != head) { // Back이 head가 될 때까지 계속 실행하는 반복문
 		printf("%s\n", Back->value); // Back의 value값을 프린트 해줌
-		Back = Back->prev;//ddsds
-	}
-}
+		Back = Back->prev; // 프린트해줬으면 Back공간의 prev값을 다시 back에 넣어줌
+	} // Back의 value값을 head에 닿기 전에 계속해서 출력해줌.
+} 
 
 
-int main()
+int main() // main 함수
 {
-	init();
-	char *line[MAX_LEN] = {"Geoffrey", "Yoshua", "Yann", "Cho", "Alex"};
-	printf("Original Data:\n");
-	for (int i = 0; i < 5; i++)
+	init(); // 전체적으로 init함수가 실행됨(Node포함), 공간 할당 해주는 작업을 전체적으로 하는 과정
+	char *line[MAX_LEN] = {"Geoffrey", "Yoshua", "Yann", "Cho", "Alex"}; //line이라는 메모리 공간에 각 이름들의 string을 저장
+	printf("Original Data:\n"); // "original data"라는 문구 출력, 개행
+	for (int i = 0; i < 5; i++) // i=0부터 4까지 1씩 증가, 배열의 공간을 하나씩 찾아가기 위함
 	{
-		printf("%s\n", line[i]);
-		Insert(line[i]);
+		printf("%s\n", line[i]); // line[0]~line[4]까지 프린트 해줌(순서대로 Geoffrey부터 Alex가 출력될 것임)
+		Insert(line[i]); // Insert함수 실행, 새로운 공간 할당되게 해주는 함수(New)
 	}
-	printf("\nReversed Order:\n");
-	Print_Reverse();
+	printf("\nReversed Order:\n"); // "Reversed Order" 라는 문구 출력, 개행
+	Print_Reverse(); // Print_Reverse라는 함수 실행, Back이라는 새로운 메모리 공간을 이용하여 line의 배열공간들을 뒤에서부터 읽음
+	// 출력결과는 Alex~Geoffrey가 될 것임.
 
-	return 0;
+	return 0;//main 함수 종료
 
 }
