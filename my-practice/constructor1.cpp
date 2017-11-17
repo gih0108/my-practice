@@ -8,7 +8,7 @@ class SimpleClass
         int num2;
         
     public:
-        SimpleClass()
+        SimpleClass()//구조체와 이름이 동일하고 반환값이 없는 함수가 constructor이다.
         {   
             num1 = 0;
             num2 = 0;
@@ -39,7 +39,7 @@ class SimpleClass
 
 int main(void)
 {
-    SimpleClass sc1;
+    SimpleClass sc1;//()라고 해주지 않은 이유가 반환형이 있는 함수로 착각할까봐,,
     sc1.ShowData();
     
     SimpleClass sc2(100);
