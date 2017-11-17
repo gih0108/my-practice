@@ -40,12 +40,12 @@ class SimpleClass
 int main(void)
 {
     SimpleClass sc1;//()라고 해주지 않은 이유가 반환형이 있는 함수로 착각할까봐,,
-    sc1.ShowData();
+    sc1.ShowData(); 
     
-    SimpleClass sc2(100);
+    SimpleClass sc2(100); //parameter반환형에 맞는 함수를 반환 
     sc2.ShowData();
     
-    SimpleClass sc3(100, 200);
+    SimpleClass sc3(100, 200); //parameter반환형에 맞는 함수를 반환
     sc3.ShowData();
     
     return 0;
