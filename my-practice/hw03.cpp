@@ -6,7 +6,7 @@
 typedef struct Node //Node라는 구조체를 선언
 {
 	char value[1024]; // value라는 값에 메모리 공간 1024만큼 할당
-	struct Node *prev; // Node라는 구조체 안에 prev라는 포인터 변수 설정,
+	struct Node *prev; // Node라는 구조체 안에 prev라는 포인터 변수 설정, 메모리 공간이 할당될 것.
 	//Node가 가지고 있는 head와 tail에 별도로 들어가는 공간,init함수를 보면 알 수 있음
 	struct Node *next; // Node라는 구조체 안에 next라는 포인터 변수 설정, 메모리 공간이 할당될 것.
 	//Node가 가지고 있는 head와 tail에 별도로 들어가는 공간,init함수를 보면 알 수 있음
