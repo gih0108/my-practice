@@ -28,13 +28,14 @@ class student:public human{ //상속
         strcpy(school,_school);
     }
     void Schoolinfo(){
-        Showinfo();
+        //Showinfo();
         std::cout<<school<<std::endl;
     }
 };
 
 int main(){
     student stu("이지현",21,"그림","한동");
+    stu.Schoolinfo();
     stu.Showinfo();
     stu.Study();
 
