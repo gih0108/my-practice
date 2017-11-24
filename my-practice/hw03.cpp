@@ -19,7 +19,6 @@ Node *tail; // Node의 tail이라는 공간이 할당됨.(리스트의 맨 첫 �
 //전역변수로 설정된 포인터 변수들이기 때문에 제일 메인으로 설정되는 공간들이다.
 
 //생성자 함수 선언
-
 void init() 
 {
 	head = (Node*)malloc(sizeof(Node)); // head라는 변수에 Node 사이즈만큼 메모리 공간 동적 할당(Node가 가리키는 공간에서)

@@ -27,7 +27,7 @@ void student::Study(){
 }
 int main(){
     
-    student stu("이지현",23,"그림");
+    student stu("이지현",21,"그림");
     stu.Showinfo();
     stu.Study();
     return 0;
