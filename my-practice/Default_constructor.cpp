@@ -1,4 +1,4 @@
-#include<iostream?
+#include<iostream>
 using namespace std;
 #define MAX 10
 
@@ -15,7 +15,7 @@ class record{
     void print(void);
 };
 
-vpod record::print(void)
+void record::print(void)
 {
     
 }
@@ -28,8 +28,8 @@ record::record(){
 
 int main(){
     record myRecord = record::record();
-    record hisRecord = record();
-    record herRecord;
+    record hisRecord = record();//not argument,기본 생성자 호출
+    record herRecord;//기본 생성자 호출
     
     myRecord.print();
     hisRecord.print();
