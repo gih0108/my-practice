@@ -2,24 +2,25 @@
 using namespace std;
 
 class Human{
-    private:
-        int age;
-        double height;
-        char *name;
+private:
+    int age;
+    double height;
+    char* name;
     
-    public:
-        Human();
-        Human(int,double,char*);
+public:
+    Human();
+    Human(int,double,char*);
 
-        void AskName(Human);
-        void AskAge();
-        char* GetName();
-        void What_is_your_name();
-        void How_old_are_you();
+    void AskName(Human);
+    void AskAge(Human);
+    int GetAge();
+    char* GetName();
+    void What_is_your_name();
+    void How_old_are_you();
 
-    private:
-        void Aging();
-        void Growing();
+private:
+    void Aging();
+    void Growing();
 };
 
 int Human::GetAge()
@@ -43,11 +44,11 @@ void Human::AskAge(Human other_person){
 }
 
 void Human::What_is_your_name(){
-    cout<<GetName()<<":"<<"Hello,I am"<<GetName()<<endl;
+    cout<<GetName()<<":"<<"Hello,I am"<<" "<<GetName()<<endl;
 }
 
 void Human::How_old_are_you(){
-    cout<<GetName()<<":"<<"I am"<<GetAge()<<"."<<endl;
+    cout<<GetName()<<":"<<"I am"<<" "<<GetAge()<<"."<<endl;
 }
 
 Human::Human()
@@ -75,8 +76,8 @@ void Human::Growing()
 }
 
 int main(){
-    Human jihyun(21,50,"Lee, Ji Hyun");
-    Human jimin(21,68,"Lee, Ji Min");
+    Human jihyun(21,50,"Lee Ji Hyun");
+    Human jimin(21,68,"Lee Ji Min");
     
     cout << "Greeting"<<endl;
     jihyun.AskName(jimin);
