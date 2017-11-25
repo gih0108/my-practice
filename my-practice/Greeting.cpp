@@ -2,15 +2,17 @@
 using namespace std;
 
 class Human{
-private:
+    
+private:// Personal information
     int age;
     double height;
     char* name;
     
-public:
-    Human();
+public:// Initialization
+    Human();// 기본 생성자
     Human(int,double,char*);
 
+    //Member function
     void AskName(Human);
     void AskAge(Human);
     int GetAge();
@@ -18,19 +20,19 @@ public:
     void What_is_your_name();
     void How_old_are_you();
 
-private:
+private://Private function
     void Aging();
     void Growing();
 };
 
-int Human::GetAge()
+int Human::GetAge()//human 객체 안에 있는 멤버 함수 중 GetAge()에 대한 기능
 {
-    return age;
+    return age;//함수의 기능, age값을 반환
 }
 
-char* Human::GetName()
+char* Human::GetName()//human 객체 안에 있는 멤버 함수 중 GetName()에 대한 기능
 {
-    return name;
+    return name;//함수의 기능, name값을 반환
 }
 
 void Human::AskName(Human other_person){
@@ -39,7 +41,7 @@ void Human::AskName(Human other_person){
 }
 
 void Human::AskAge(Human other_person){
-    cout<<GetAge()<<":"<<"How old are you?"<<endl;
+    cout<<GetName()<<":"<<"How old are you?"<<endl;
     other_person.How_old_are_you();
 }
 
@@ -51,7 +53,7 @@ void Human::How_old_are_you(){
     cout<<GetName()<<":"<<"I am"<<" "<<GetAge()<<"."<<endl;
 }
 
-Human::Human()
+Human::Human()//Default Constructor
 {
     age = -1;
     height = 0.0;
