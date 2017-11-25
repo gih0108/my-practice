@@ -5,7 +5,7 @@ class point{
     public:
     int x,y;
     
-    point(int_x, int_y){
+    point(int _x, int _y){
         x = _x; 
         y = _y;
     }
@@ -15,7 +15,7 @@ class point{
         y = pt.y;
     }//copy constructor
     
-    void set(int_x, int_y){
+    void set(int _x, int _y){
         x = _x; 
         y = _y;
     }
