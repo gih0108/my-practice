@@ -13,7 +13,7 @@ class point{
     point(const point &pt){
         x = pt.x; 
         y = pt.y;
-    }
+    }//copy constructor
     
     void set(int_x, int_y){
         x = _x; 
