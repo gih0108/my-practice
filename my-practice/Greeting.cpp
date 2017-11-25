@@ -81,9 +81,12 @@ int main(){
     Human jihyun(21,50,"Lee Ji Hyun");
     Human jimin(21,68,"Lee Ji Min");
     
-    cout << "Greeting"<<endl;
+    cout<< "Greeting"<<endl;
     jihyun.AskName(jimin);
     jimin.AskName(jihyun);
     jihyun.AskAge(jimin);
     jimin.AskAge(jihyun);
+    //jihyun.Human();
+    //jihyun.Aging(); //private
+    //jihyun.Growing(); //private
 }
