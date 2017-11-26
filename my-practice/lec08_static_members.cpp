@@ -10,10 +10,16 @@ class math{
     static int permu;
     
     public:
-    /*math(){ //default constructor임을 주의!
+    math(){ //default constructor임을 주의!
         sum = 0;
         facto = 0;
         permu = 0;
+    }
+    
+    /*
+    void ShowData() const
+    {
+        cout << sum<< ' ' << facto << ' '<<  permu<<endl;
     }*/
     
     //static member function들임!!
@@ -64,9 +70,22 @@ int main(){
     cout<<"sum:"<<result1<<endl;
     cout<<"factorial:"<<result2<<endl;
     cout<<"permutation:"<<result3<<endl;
+    
+    /*
+    math math1();
+    math ma = math1();
+    ma.ShowData();*/
 
     return 0;
 }
+
+/*
+math math1() // 지역적으로 선언한 함수 
+{
+    math ma(sum = 0,facto = 0,permu = 0); 
+    return ma;
+}*/
+
 
 //question : public의 math()함수는 왜 있는거? 저걸 없애도 답 출력되는 데는 별 문제 없는데, 
 //만약에 저 math()함수 안에 변수들을 출력하려면 main함수에서 어케 해야함?몇번 해봤는데 에러뜸.
