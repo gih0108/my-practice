@@ -10,18 +10,16 @@ class math{
     static int permu;
     
     public:
-    math(){ //default constructor임을 주의!
+    /*math(){ //default constructor임을 주의!
         sum = 0;
         facto = 0;
         permu = 0;
-    }
+    }*/
     
     //static member function들임!!
     static int summation(int a);
     static int factorial(int a);
     static int permutation(int a, int b);
-    
-    //void printmath(int _sum, int _facto, int _permu);
     
     
 };
@@ -66,7 +64,14 @@ int main(){
     cout<<"sum:"<<result1<<endl;
     cout<<"factorial:"<<result2<<endl;
     cout<<"permutation:"<<result3<<endl;
-    //math::math();
-    
+
     return 0;
 }
+
+//question : public의 math()함수는 왜 있는거? 저걸 없애도 답 출력되는 데는 별 문제 없는데, 
+//만약에 저 math()함수 안에 변수들을 출력하려면 main함수에서 어케 해야함?몇번 해봤는데 에러뜸.
+
+//아직 static에 대한 이해를 제대로 못해서 그런지 class밖에서 static 멤버 변수들에 대해 초기화를 시켜 주었는데
+//왜 각 sum, factorial, permutation함수에서는 또 초기화가 되어있는거?
+//class밖에서 초기화시킨 멤버변수들을 없애면 에러뜨고, sum, factorial, permutation함수에서 초기화 시킨걸 없애면
+//permutation값이 0이됨. 결과가 달라짐
