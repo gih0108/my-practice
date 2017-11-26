@@ -15,6 +15,8 @@ class student{
 
 int student::count = 0;// student class의 static int count가 0으로 초기화
 //count가 static변수 이기때문에 student class와 공유되고 있으므로 문제될 것이 없다.
+//static 멤버는 무조건 class 정의 밖에서 초기화되어야 한다
+//그리고 static 멤버 변수는 딱 한번 초기화 된다
 
 student::student(int i){ // stduent class의 student함수(constructor),argument가 int i로 존재함
     id = i; // id = i의 값으로 초기화됨
@@ -23,14 +25,23 @@ student::student(int i){ // stduent class의 student함수(constructor),argument
 
 void student::printCount(){ // student class의 함수 & 기능 
     cout << "count = " << count << endl; // count값을 출력해주는 기능을 함
-    //cout << "id = " << "," << id << endl;
+    //cout << "id = " << id << endl;
 }
 
 int main(){
     student myID = 21600555; // student 클래스의 object가 myID로 설정됨, 그리고 학번으로 초기화됨
-    myID.printCount(); 
-    student yourID; 
-    myID.printCount();
-    student hisID, herID;
-    student::printCount();
+    myID.printCount(); //count = 1이 출력될 것임
+    student yourID; // 객체 생성, 초기화는 해주지 않음
+    myID.printCount(); // count = 1로 초기화 되었던 myID의 재초기화 -> count = 2
+    //여기서 보여주려고 하는 것은 static 멤버 변수는 한 번만 초기화 된다는 것을 보여주려는 것
+    
+    student hisID, herID;//객체 생성, 초기화는 해주지 않음
+    student::printCount();//hisID와 herID가 각각 1번씩 count했으므로 총 count = 4가 됨
+    //student의 printCount함수를 통째로 부름..
+    
+    //student hisID;
+    //myID.printCount();
+    //student herID;
+    //myID.printCount();
+    //위 주석처리 된 것 처럼하면 그냥 각각 count가 3,4로 출력됨
 }
