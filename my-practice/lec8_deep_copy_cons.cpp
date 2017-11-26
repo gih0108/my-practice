@@ -23,7 +23,7 @@ record::record(char* _n, char* _tel)//record(char*, char*);이 함수의 기능�
 }
 
 //deep copy
-record::record(const record& _record){ // _record라는 새로운 변수를 만들어 record를 참조
+record::record(const record& _record){ // _record라는 새로운 변수를 만들어 참조
     name =new char[strlen(_record.name)+1];//name에 _record가 참조하는 name + null만큼의 길이를 가진 공간 할당
     strcpy(name, _record.name);//할당된 공간 name에 _record의 name에 들어온 값 복사
     tel = new char[strlen(_record.tel)+1];//tel에 _record가 참조하는 tel + null만큼의 길이를 가진 공간 할당
@@ -50,8 +50,14 @@ void record::print(void){//print해주는 함수 기능
 int main(){
     record myRecord("LEE", "3263"); // 선언과 동시에 초기화
     record hisRecord(myRecord); //새로운 객체를 설정해 주고 참조자로 설정해준 deep copy부분을 부름
-    myRecord.modifyTel("3458");//modify함수부분 실행, tel 공간에는 문자 3458이 들어가 있음.
+    //record herRecord(hisRecord);
+    myRecord.modifyTel("3458");//modify함수부분 실행, tel 공간에는 문자 3458이 들어가 있음
+    
+    //hisRecord.modifyTel("6550");
     myRecord.print();//myRecord를 불렀지만 이미 tel부분은 modify함수로 인해 바뀐 상태임
-    hisRecord.print();//hisRecord
+    hisRecord.print();//hisRecord를 불렀고, myRecord가 _record의 참조자가 됨
+    //print되는 값은 print()함수에 맞게 새로운 공간이 각각 할당되고 이미 초기화 되었던 myRecord값이 출력
+    
+    //herRecord.print();
     return 0;
 }
