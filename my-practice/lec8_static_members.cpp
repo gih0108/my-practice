@@ -37,7 +37,7 @@ int main(){
     myID.printCount(); //count = 1이 출력될 것임
     myID.printID(); // 학번이 출력됨. 객체 생성시 초기화 시켰던 값이 그대로 출력됨.
     
-    student yourID = 21400687; // 객체 생성, 학번으로 객체 생성 후 초기화
+    student yourID = 21400555; // 객체 생성, 학번으로 객체 생성 후 초기화
     myID.printCount(); // count = 1로 초기화 되었던 myID의 재초기화 -> count = 2
     //여기서 보여주려고 하는 것은 static 멤버 변수는 한 번만 초기화 된다는 것을 보여주려는 것
     yourID.printID();// 학번이 출력됨. 객체 생성시 초기화 시켰던 값이 그대로 출력됨.
@@ -56,3 +56,7 @@ int main(){
     //myID.printCount();
     //위 주석처리 된 것 처럼하면 그냥 각각 count가 3,4로 출력됨
 }
+
+//question : 내가 id출력하는 함수들이 없길래 임의로 만들었는데, 뭔가 내가 만들었지만 이해가 안감
+//이해가 안되는 부분이 초기화 관련된 것임.class 안에서 student(int i = 0);라고 선언되었는데 
+//student hisID;왜 이때만 0으로 초기화된 값이 나오는건지,,분명 디폴트 생성자는 아닌거 같은데,,
