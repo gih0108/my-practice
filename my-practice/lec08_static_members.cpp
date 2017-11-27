@@ -22,12 +22,12 @@ class math{
         cout << sum<< ' ' << facto << ' '<<  permu<<endl;
     }*/
     
+    
     //static member function들임!!
     static int summation(int a);
     static int factorial(int a);
     static int permutation(int a, int b);
-    
-    
+
 };
 
 int math::sum = 0;//math class의 sum 변수가 0으로 초기화
@@ -75,6 +75,9 @@ int main(){
     math math1();
     math ma = math1();
     ma.ShowData();*/
+    
+    math math1;//math class에 math1이라는 객체
+    cout << "default constructor variable : " << math1.sum << ","<<math1.facto<<","<<math1.permu << endl;
 
     return 0;
 }
@@ -93,4 +96,4 @@ math math1() // 지역적으로 선언한 함수
 //아직 static에 대한 이해를 제대로 못해서 그런지 class밖에서 static 멤버 변수들에 대해 초기화를 시켜 주었는데
 //왜 각 sum, factorial, permutation함수에서는 또 초기화가 되어있는거?
 //class밖에서 초기화시킨 멤버변수들을 없애면 에러뜨고, sum, factorial, permutation함수에서 초기화 시킨걸 없애면
-//permutation값이 0이됨. 결과가 달라짐
+//permutation값이 0이됨. 결과가 달라짐.왜?
