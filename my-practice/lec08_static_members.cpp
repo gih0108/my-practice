@@ -9,19 +9,17 @@ class math{
     static int facto;
     static int permu;
     
+    //이 부분 살짝 변형. 그래도 값 출력되는데는 전혀 문제 없음.
     public:
+    int sum1;
+    int facto1;
+    int permu1;
+    
     math(){ //default constructor임을 주의!
-        sum = 0;
-        facto = 0;
-        permu = 0;
+        sum1 = 0;
+        facto1 = 0;
+        permu1 = 0;
     }
-    
-    /*
-    void ShowData() const
-    {
-        cout << sum<< ' ' << facto << ' '<<  permu<<endl;
-    }*/
-    
     
     //static member function들임!!
     static int summation(int a);
@@ -71,29 +69,20 @@ int main(){
     cout<<"factorial:"<<result2<<endl;
     cout<<"permutation:"<<result3<<endl;
     
-    /*
-    math math1();
-    math ma = math1();
-    ma.ShowData();*/
-    
+    //임의로 만듦.
     math math1;//math class에 math1이라는 객체
-    cout << "default constructor variable : " << math1.sum << ","<<math1.facto<<","<<math1.permu << endl;
+    cout << "default constructor variable : " << math1.sum1 << ","<<math1.facto1<<","<<math1.permu1 << endl;
 
     return 0;
 }
 
-/*
-math math1() // 지역적으로 선언한 함수 
-{
-    math ma(sum = 0,facto = 0,permu = 0); 
-    return ma;
-}*/
 
 
-//question : public의 math()함수는 왜 있는거? 저걸 없애도 답 출력되는 데는 별 문제 없는데, 
-//만약에 저 math()함수 안에 변수들을 출력하려면 main함수에서 어케 해야함?몇번 해봤는데 에러뜸.
+//question : public의 math()함수는 왜 있는거? 저걸 없애도 답 출력되는 데는 별 문제 없던데..
+//지금은 내가 변수이름이 겹쳐서 1을 붙여서 바꿔서 출력되게 만들었는데 출력됨. 원래변수대로 하면 이미 선언된 변수라고 하면서 오류.
+//어쨌든 이 문제의 답을 출력하는데는 별 문제 없어서 보이는데 왜 굳이 만들어준거인지?무슨 용도?
 
 //아직 static에 대한 이해를 제대로 못해서 그런지 class밖에서 static 멤버 변수들에 대해 초기화를 시켜 주었는데
 //왜 각 sum, factorial, permutation함수에서는 또 초기화가 되어있는거?
 //class밖에서 초기화시킨 멤버변수들을 없애면 에러뜨고, sum, factorial, permutation함수에서 초기화 시킨걸 없애면
-//permutation값이 0이됨. 결과가 달라짐.왜?
+//permutation만값이 0이됨. 결과가 달라짐.왜?
