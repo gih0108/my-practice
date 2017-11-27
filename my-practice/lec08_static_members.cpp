@@ -85,4 +85,4 @@ int main(){
 //아직 static에 대한 이해를 제대로 못해서 그런지 class밖에서 static 멤버 변수들에 대해 초기화를 시켜 주었는데
 //왜 각 sum, factorial, permutation함수에서는 또 초기화가 되어있는거?
 //class밖에서 초기화시킨 멤버변수들을 없애면 에러뜨고, sum, factorial, permutation함수에서 초기화 시킨걸 없애면
-//permutation만값이 0이됨. 결과가 달라짐.왜?
+//permutation만 값이 0이됨. 결과가 달라짐.왜?
