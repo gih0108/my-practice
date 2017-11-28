@@ -22,7 +22,7 @@ class SoSimple
         }
 };
 
-void SimpleFunObj(SoSimple ob)
+void SimpleFunObj(SoSimple ob)//매개변수 ob의 복사 생성자 호출, 인자로 obj가 전달될 것
 {
     ob.ShowData();
 }
@@ -31,8 +31,10 @@ int main(void)
 {
     SoSimple obj(7);
     cout << "함수호출 전" << endl;
+    
     SimpleFunObj(obj);//함수 SimpleFunObj을 호출하면서 객체 obj를 인자로 전달하고 있음. 
     //25행에 선언된 매개변수 ob의 복사 생성자가 호출되면서, 인자로 obj가 전달됨.
+    
     cout << "함수호출 후" << endl;
     return 0;
 }
