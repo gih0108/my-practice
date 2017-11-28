@@ -22,7 +22,8 @@ class SoSimple
         }
 };
 
-void SimpleFunObj(SoSimple ob)//매개변수 ob의 복사 생성자 호출, 인자로 obj가 전달될 것
+void SimpleFunObj(SoSimple ob)//매개변수 ob의 복사 생성자 호출, 인자로 obj가 전달될 것임
+//ob객체에는 SoSimple관련된 것들이 모두 들어올 것 임
 {
     ob.ShowData();
 }
