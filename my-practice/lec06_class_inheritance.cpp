@@ -54,4 +54,4 @@ int main(){
     return 0;
 }
     
-//question : 멤버 이니셜라이저?
+//question : 상속에서 멤버 이니셜라이저?
