@@ -62,4 +62,5 @@ int main(){
     return 0;
 }
 
-//살짝 참조 해주는 부분에서 헷갈림. 다시 볼 필요가 있음. 질문을 하던지..
+//question : 살짝 참조 해주는 부분에서 헷갈림. 예를 들어 const record& _record 여기서보면,  _record라는 참조자를 만들어서 
+//record를 참조해 줬다는 건가?

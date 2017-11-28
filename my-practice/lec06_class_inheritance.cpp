@@ -12,7 +12,7 @@ class human{
 
     public:
     human(char* _name,int _age,char* _hobby,char * _school):name(_name),age(_age),hobby(_hobby),school(_school){}
-    //멤버 이니셜라이저, 상속받은 클래스이기 때문에 부모의 생성자 호출
+    //멤버 이니셜라이저
     //멤버 이니셜라이저를 반드시 써야하는 경우: 
     //상수 멤버가 있을 때
     //레퍼런스 멤버가 있을 때
@@ -54,3 +54,4 @@ int main(){
     return 0;
 }
     
+//question : 멤버 이니셜라이저?
