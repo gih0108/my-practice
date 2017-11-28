@@ -9,7 +9,7 @@ class math{
     static int facto;
     static int permu;
     
-    //이 부분 살짝 변형. 그래도 값 출력되는데는 전혀 문제 없음.
+    //이 부분 살짝 변형. 그래도 결과 값 출력되는데는 전혀 문제 없음.
     public:
     int sum1;
     int facto1;
