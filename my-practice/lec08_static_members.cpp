@@ -21,6 +21,14 @@ class math{
         permu1 = 0;
     }
     
+    
+    /* 원래 public의 math함수 부분
+    math(){ 
+        sum = 0;
+        facto = 0;
+        permu = 0;
+    }*/
+    
     //static member function들임!!
     static int summation(int a);
     static int factorial(int a);
@@ -78,7 +86,7 @@ int main(){
 
 
 
-//question : public의 math()함수는 왜 있는거? 저걸 없애도 답 출력되는 데는 별 문제 없던데..
+//question : public의 math()함수는 왜 있는거? 저걸 없애도(주석처리 된 곳) 답 출력되는 데는 별 문제 없던데..
 //지금은 내가 변수이름이 겹쳐서 1을 붙여서 바꿔서 출력되게 만들었는데 출력됨. 원래변수대로 하면 이미 선언된 변수라고 하면서 오류.
 //어쨌든 이 문제의 답을 출력하는데는 별 문제 없어서 보이는데 왜 굳이 만들어준거인지?무슨 용도?
 
