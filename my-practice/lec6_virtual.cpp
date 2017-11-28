@@ -23,7 +23,7 @@ public: // 구조체 안에서 누구나 쓸 수 있음
 	}
 
 	virtual void Study() { //(가상)함수
-		cout << "공부안하는 중입니다" << endl;
+		cout << "공부 안하는 중입니다" << endl;
 	}//오버라이딩. 가상함수를 설정함으로써 이 클래스를 상속받은 Student 객체는 Student객체의 Study를 실행
 
 
