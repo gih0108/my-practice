@@ -90,6 +90,8 @@ int main()
 	// int hr = 5;
 	
 	// Person jun = Person(name, age);
+	
+	
 	// jun.Info();
 	// jun.Study();
 	
@@ -98,5 +100,5 @@ int main()
 
 }
 
-//new와 delete는 같이 따라오는 경우, 생성자가 오버로딩, 함수가 같은데 받는 타입이 다름, 소멸자(delete)를 넣으면 어떻게 
+//new와 delete는 같이 따라오는 경우, 생성자가 오버로딩, 함수가 같은데 받는 타입이 다름, 소멸자(delete)를 넣으면 어떻게?
 //출력결과가 나오는지,,(교수님 단골 문제)

@@ -12,7 +12,7 @@ int main(void){
     std::cout << strlen(str2) << std::endl;
     strcpy(str3, str1);
     strcat(str3, str2);
-    std::cout << str3 << std::endl;
+    std::cout << str3 <<std::endl;
     
     if(strcmp(str1,str2) == 0)
         std::cout << "string is same" << std::endl;

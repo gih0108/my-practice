@@ -33,3 +33,5 @@ SimpleClass sc1() // 지역적으로 선언한 함수
     SimpleClass sc(20,30); 
     return sc;
 }
+
+//생성자 이용하여 객체도 생성과 동시에 초기화 가능

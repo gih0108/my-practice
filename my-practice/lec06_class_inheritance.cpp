@@ -11,7 +11,7 @@ class human{
     char* school;
 
     public:
-    human(char* _name,int _age,char* _hobby,char * _school):name(_name),age(_age),hobby(_hobby),school(_school){}
+    human(char* _name,int _age,char* _hobby,char * _school)
     //멤버 이니셜라이저
     //멤버 이니셜라이저를 반드시 써야하는 경우: 
     //상수 멤버가 있을 때
@@ -35,6 +35,7 @@ class student:public human{ //상속
         char school[30];
     public:
     student(char* _name,int _age,char* _hobby,char* _school):human(_name,_age,_hobby,_school){ //상속 
+    //상속받은 human 안에서 _name, _age, _hobby, _school을 인자로 전달하는 생성자를 호출하라
         strcpy(school,_school);
     }
     /*
@@ -54,4 +55,3 @@ int main(){
     return 0;
 }
     
-//question : 상속에서 멤버 이니셜라이저?

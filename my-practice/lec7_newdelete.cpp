@@ -1,4 +1,5 @@
 # include<iostream>
+#include<string.h>
 
 using namespace std;
 
@@ -7,7 +8,7 @@ using namespace std;
 
 char * MakeStrAdr(int len)
 {
-    char * str = new char[len] // 해당 길이의 문자열 저장이 가능한 배열 생성
+    char * str = new char[len]; // 해당 길이의 문자열 저장이 가능한 배열 생성
     return str; // 그 배열의 주소 값 반환
 }
 
