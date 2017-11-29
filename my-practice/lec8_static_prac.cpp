@@ -12,8 +12,7 @@ class Test{
         a = 0;
     };
 
-    static v
-    oid Show(int n, int m){
+    static void Show(int n, int m){
         cout << "n = :" << n <<","<< "m = :" << m <<endl;
     }
 };
