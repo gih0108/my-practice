@@ -64,3 +64,12 @@ int main(){
 
 //question : 살짝 참조 해주는 부분에서 헷갈림. 예를 들어 const record& _record 여기서보면,  _record라는 참조자를 만들어서 
 //record를 참조해 줬다는 건가?
+
+/*
+deep copy를 위해서 기존의 shallow copy(껍데기만 복사하는..) 처럼 변수가 차지하는 만큼의 공간만 할당해서
+copy해주는 것이 아니라 
+record라는 새로운 "그릇" 따로 선언해서 그 안에 들어가 있는 값을 복사해서 넘겨주는 건데
+
+http://wonjayk.tistory.com/256 
+그냥 이정도로만 이해해도 될듯 */
+
