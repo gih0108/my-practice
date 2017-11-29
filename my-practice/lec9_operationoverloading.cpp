@@ -21,3 +21,15 @@ class Point
         }
         
 };
+
+int main(void)
+{
+    Point pos1(3,4);
+    Point pos2(10,20);
+    Point pos3=pos1.operator+(pos2);
+    
+    pos1.ShowPosition();
+    pos2.ShowPosition();
+    pos3.ShowPosition();
+    return 0;
+}
