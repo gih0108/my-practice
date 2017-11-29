@@ -69,7 +69,7 @@ int  main()
     c2.setQuarters(3);//c2의 quarters = 3
     c2.setDimes(8);//c2의 dimes = 8
     
-    //c3 = c1 + c2; 
+    //c3 = c1 + c2; //이 방법도 가능
     c3 = c1.operator+(c2);//덧셈해주는 operator 함수 호출, c1객체의 멤버함수인 operator+를 호출하면서 인자로 c2전달
     //덧셈 결과로 그 값이 반환되고 c3 초기화
 
