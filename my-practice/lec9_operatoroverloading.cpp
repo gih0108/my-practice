@@ -2,16 +2,28 @@
 
 class ChangePocketClass
 {
+    
+    private :
+    int quarters;
+    int dimes;
+    
     public:
+    /*
     ChangePocketClass():quarters(0),dimes(0)
     {}
     
     ChangePocketClass(int q, int d):quarters(q),dimes(d)
+    {}*/
+    
+    ChangePocketClass(int q = 0, int d = 0):quarters(q),dimes(d)
     {}
     
-    /*
-    ChangePocketClass ChangePocketClass::add(const ChangePocketClass &rhs) const;
-    {}*/
+    ChangePocketClass operator+(const ChangePocketClass &rhs)
+    {
+        ChangePocketClass pos(quarters+rhs.quarters, dimes+rhs.dimes);
+        return pos;
+    }
+    
     
     void setQuarters(int val)
     {
@@ -33,9 +45,7 @@ class ChangePocketClass
         return dimes;
     }
     
-    private :
-    int quarters;
-    int dimes;
+    
 };
 
 int  main()
@@ -50,7 +60,7 @@ int  main()
     c2.setDimes(8);
     
     //c3 = c1 + c2;
-    c3 = c1.add(c2);
+    c3 = c1.operator+(c2);
     
     return 0;
 }
