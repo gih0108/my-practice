@@ -22,7 +22,7 @@ class ChangePocketClass
     {}
     
     //연산자 +해주는 함수
-    ChangePocketClass operator+(const ChangePocketClass &rhs)
+    ChangePocketClass operator+(const ChangePocketClass &rhs) const
     {
         ChangePocketClass pos(quarters+rhs.quarters, dimes+rhs.dimes);//인자로 전달된 값을 참조해서
         //c1객체의 quarters와 dimes와 c2객체의 quarters와 dimes을 더해줌
