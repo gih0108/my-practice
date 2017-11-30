@@ -30,10 +30,17 @@ int main(){
     std::cout << "이름 : " << p1->name << std::endl;
     std::cout << "나이 : " << p1->age << std::endl;
     
+    /*값은 주소 값을 가리킴. 
+    std::cout << p1 <<std::endl;
+    std::cout << ptr <<std::endl;
+    */
+    
     delete []p1;//p1의 모든 배열 공간들을 삭제
     return 0;
 }
 
 //그냥 p1->name, age해서 출력해주면 똑같은 답 나오는데 왜 어렵게 static_cast를 이용해서 타입을 바꿔줌?
 //아니 왜 애초에 void *ptr을 설정해줬는지 모르겠음. 저렇게 선언해 준 이유가 따로 있는가?
+//ptr선언되어 있는 것들 주석 처리하고 p1만 가지고 해도 같은 결과 출력되던데,,
+
 
