@@ -20,7 +20,7 @@ int student::count = 0;// student class의 static int count가 0으로 초기화
 //그리고 static 멤버 변수는 딱 한번 초기화 된다
 
 student::student(int i){ // stduent class의 student함수(constructor),argument가 int i로 존재함
-    id = i; // id = i의 값으로 초기화됨
+    id = i; // id = i의 값으로 초기화됨, 이미 i는 0으로 초기화 되었음(객체 생성시 초기화 안해주면 그대로 0이 출력될 것임)
     count++; // count가 후위증가
 }
 
@@ -47,7 +47,7 @@ int main(){
     student::printCount();//hisID와 herID가 각각 1번씩 count했으므로 총 count = 4가 됨
     //student의 printCount함수를 통째로 부름..
     
-    hisID.printID();// 학번이 출력됨, hisID는 객체 생성 시 초기화 값이 없었기 때문에 
+    hisID.printID();// 0이 출력됨, hisID는 객체 생성 시 초기화 값이 없었기 때문에 
     herID.printID();// 학번이 출력됨. 객체 생성시 초기화 시켰던 값이 그대로 출력됨
     
     //student hisID;
@@ -60,10 +60,12 @@ int main(){
 //question : 내가 id출력하는 함수들이 없길래 임의로 만들었는데, 뭔가 내가 만들었지만 이해가 안감
 //이해가 안되는 부분이 초기화 관련된 것임.class 안에서 student(int i = 0);라고 선언되었는데 
 //student hisID;왜 이때만 0으로 초기화된 값이 나오는건지,,
+
+
  /*
- 별거아님 
- student herID = 21600555 가 먹히는 이유는 c++ 특성상 side effect로  
-서로 맞지않는 형식으로 저렇게 = 을떄리면 최대한 그 의미를 찾아가려고 하는 특성이있음.
+ student herID = 21600555로 되는 이유는 c++ 특성상 side effect로  
+서로 맞지않는 형식으로 저렇게 = 을 하면 최대한 그 의미를 찾아가려고 하는 특성이있음.
 int 값 21600555는 student 클래스의 멤버 변수중 int인 id로 들어가버림.
-드래서 id 호출하면 저 값이 나타나는 거고 hisID는 그러한 코드가 없었기때문에 기본으로 초기화해주는
-0이 id 로 emrka */
+그래서 id 호출하면 21600555 값이 나타나는 거고 hisID는 그러한 코드가 없었기 때문에 기본으로 초기화해주는
+0이 id로 들어간다 
+*/
