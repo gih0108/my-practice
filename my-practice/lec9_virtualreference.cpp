@@ -23,7 +23,7 @@ public:
         cout <<"SecondFunc()" << endl;
     }
     
-    virtual void SimpleFunc()
+    void SimpleFunc()
     {
         cout << "Second's SimpleFunc()" << endl;
     }
@@ -37,7 +37,7 @@ public:
         cout << "ThirdFunc()" << endl;
     }
     
-    virtual void SimpleFunc()
+    void SimpleFunc()
     {
         cout << "Third's SimpleFunc()" <<endl;
     }
