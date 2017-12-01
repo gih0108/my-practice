@@ -11,6 +11,7 @@ public:
     {
         strOne=new char[strlen(str)+1];
         cout<<str<<endl;
+        cout<<strOne<<endl;
     }
     virtual ~First()
     {
