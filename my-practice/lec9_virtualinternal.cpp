@@ -15,7 +15,7 @@ public:
     {
         cout << "Func2" <<endl;
     }
-    virtual void Func3()//Func3함수는 virtual 아님
+    void Func3()//Func3함수는 virtual 아님
     {
         cout <<"Func3" << endl;
     }
@@ -41,10 +41,8 @@ int main(void)
 {
     AAA * aptr = new AAA();
     aptr->Func1();
-    aptr->Func3();
     
     BBB * bptr = new BBB();
     bptr->Func1();
-    aptr->Func3();
     return 0;
 }
