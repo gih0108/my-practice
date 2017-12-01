@@ -11,9 +11,9 @@ public:
     {
         strOne=new char[strlen(str)+1];
         cout<<str<<endl;
-        cout<<strOne<<endl;
+        
     }
-    virtual ~First()
+    ~First()
     {
         cout<<"~First()"<<endl;
         delete []strOne;
@@ -30,7 +30,7 @@ public:
         strTwo=new char[strlen(str2)+1];
         cout<<str1<<","<<str2<<endl;
     }
-    virtual ~Second()
+    ~Second()
     {
         cout<<"~Second()"<<endl;
         delete []strTwo;
