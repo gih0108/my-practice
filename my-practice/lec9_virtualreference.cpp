@@ -8,6 +8,11 @@ public:
     {
         cout << "FirstFunc()" << endl;
     }
+    
+    virtual void SimpleFunc()
+    {
+        cout << "First's SimpleFunc()" << endl;
+    }
 };
 
 class Second : public First
