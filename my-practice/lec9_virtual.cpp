@@ -84,6 +84,10 @@ int main()
 	delete ptr1; // 삭제
 	delete ptr2; // 삭제
 	
+	//ptr1의 메모리 공간을 삭제 해주는데 소멸자가 가상함수이므로 Person객체에 가서 소멸자를 삭제해주는 코드를 출력함
+	//ptr2도 메모리 공간을 삭제 해주는데 ptr2도 가상함수 이므로 Student객체로 가서 소멸자를 삭제해주는데,
+	//Student객체는 Person을 상속받고 있기 때문에 Person을 한번 더 삭제해줌(코드보면 알 수 있음)
+	
 	// int age = 17;
 	// char name[] = "Junyoung";
 	// char sName[] = "Jihyun";
