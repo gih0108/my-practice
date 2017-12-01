@@ -49,11 +49,11 @@ public://함수 오버로드.
 	Student(char * myname, int myage, int mygrade, int myhour) : Person(myname, myage), grade(mygrade), hour(myhour) {}//멤버 이니셜라이저
 	//상속 받은 멤버 변수들을 초기화해주는 방법
 
-	void Study() { //가상함수화 됨, 오버라이딩. 
+	void Study() { //선언은 해주지 않았지만 가상함수임, 오버라이딩. 
 		cout << hour << "시간 째 공부하는 중입니다." << endl; 
 	}
 
-	~Student(); //Student 객체 소멸,가상 소멸자
+	~Student(); //Student 객체 소멸,선언은 해주지 않았지만 가상함수
 
 };
 //가상함수 : 포인터 변수가 실제로 가리키는 객체를 참조하여 호출의 대상을 결정함
@@ -81,7 +81,7 @@ int main()
 
 	ptr2->Study(); //오버라이딩 관계지만 ptr2가 Student에 할당
 
-	delete ptr1; // 삭제
+	//delete ptr1; // 삭제
 	delete ptr2; // 삭제
 	
 	// int age = 17;
