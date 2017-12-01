@@ -81,7 +81,7 @@ int main()
 
 	ptr2->Study(); //오버라이딩 관계지만 ptr2가 Student에 할당
 
-	//delete ptr1; // 삭제
+	delete ptr1; // 삭제
 	delete ptr2; // 삭제
 	
 	// int age = 17;

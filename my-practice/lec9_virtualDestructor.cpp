@@ -13,7 +13,7 @@ public:
         cout<<str<<endl;//str의 값 출력해주는 코드
         
     }
-    virtual ~First()//가상함수로 설정된 destructor(virtual destructor)
+    ~First()//가상함수로 설정된 destructor(virtual destructor)
     {
         cout<<"~First()"<<endl;//virtual destructor가 실행되었음을 확인해주는 코드
         delete []strOne;//strOne에 할당된 배열 메모리 공간 삭제
@@ -30,7 +30,7 @@ public:
         strTwo=new char[strlen(str2)+1];//미리 설정해 놓은 포인터 변수에 Second함수에 들어오는 두번째 parameter의 값+null만큼 공간 할당
         cout<<str1<<","<<str2<<endl;//str1,str2 출력해주는 코드
     }
-    virtual ~Second()//가상함수로 설정된 destructor(virtual destructor)
+    ~Second()//가상함수로 설정된 destructor(virtual destructor)
     {
         cout<<"~Second()"<<endl;//virtual destructor가 실행되었음을 확인해주는 코드
         delete []strTwo;//strTwo에 할당된 배열 메모리 공간 삭제
