@@ -2,18 +2,18 @@
 #include<string.h>
 using namespace std;
 
-class First
+class First //First 라는 이름의 클래스 설정
 {
-private:
-    char *strOne;
+private: 
+    char *strOne;// 포인터 변수를 private으로 설정
 public:
-    First(char * str)
+    First(char * str) //First함수
     {
-        strOne=new char[strlen(str)+1];
-        cout<<str<<endl;
+        strOne=new char[strlen(str)+1];//미리 설정해 놓은 포인터 변수에 First함수에 들어오는 parameter의 값+null만큼 공간 할당
+        cout<<str<<endl;//str의 값 출력해주는 코드
         
     }
-    ~First()
+    virtual ~First()
     {
         cout<<"~First()"<<endl;
         delete []strOne;
@@ -30,7 +30,7 @@ public:
         strTwo=new char[strlen(str2)+1];
         cout<<str1<<","<<str2<<endl;
     }
-    ~Second()
+    virtual ~Second()
     {
         cout<<"~Second()"<<endl;
         delete []strTwo;
