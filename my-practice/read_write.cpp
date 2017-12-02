@@ -16,13 +16,13 @@
 
 // Project San
 
-class San
+class hyun
 
 {
 
 public:
 
-    San(int num, int age, const char* name)
+    hyun(int num, int age, const char* name)
 
     :m_num(num), m_age(age)
 
@@ -36,7 +36,7 @@ public:
 
     }
 
-    ~San()
+    ~hyun()
 
     {
 
@@ -68,15 +68,15 @@ private:
 
 
 
-void print(std::ostream& os, San& san)
+void print(std::ostream& os, hyun& ji)
 
 {
 
-    os << san.get_number() << std::endl;
+    os << ji.get_number() << std::endl;
 
-    os << san.get_age() << std::endl;
+    os << ji.get_age() << std::endl;
 
-    os << san.get_name() << std::endl;
+    os << ji.get_name() << std::endl;
 
 }
 
@@ -132,25 +132,22 @@ int main(int argc, char** argv)
 
  
 
- 
 
- 
+    std::vector<hyun*> ji_dyn_array = std::vector<hyun*>();
 
-    std::vector<San*> san_dyn_array = std::vector<San*>();
+    ji_dyn_array.push_back(new hyun(10, 20, "cbchoi"));
 
-    san_dyn_array.push_back(new San(10, 20, "cbchoi"));
+    ji_dyn_array.push_back(new hyun(11, 22, "cbchoi"));
 
-    san_dyn_array.push_back(new San(11, 22, "cbchoi"));
+    ji_dyn_array.push_back(new hyun(12, 24, "cbchoi"));
 
-    san_dyn_array.push_back(new San(12, 24, "cbchoi"));
-
-    san_dyn_array.push_back(new San(13, 26, "cbchoi"));
+    ji_dyn_array.push_back(new hyun(13, 26, "cbchoi"));
 
     
 
-    for(std::vector<San*>::iterator iter = san_dyn_array.begin();
+    for(std::vector<hyun*>::iterator iter = ji_dyn_array.begin();
 
-        iter != san_dyn_array.end(); ++iter)
+        iter != ji_dyn_array.end(); ++iter)
 
     {
 
@@ -166,11 +163,11 @@ int main(int argc, char** argv)
 
     fout.open("output2.prac");
 
-    fout << san_dyn_array.size() << std::endl;
+    fout << ji_dyn_array.size() << std::endl;
 
-    for(std::vector<San*>::iterator iter = san_dyn_array.begin();
+    for(std::vector<hyun*>::iterator iter = ji_dyn_array.begin();
 
-        iter != san_dyn_array.end(); ++iter)
+        iter != ji_dyn_array.end(); ++iter)
 
     {
 
@@ -216,9 +213,9 @@ int main(int argc, char** argv)
 
         
 
-        San my_san = San(number, age, buf); //san class로 만들어주세여
+        hyun my_ji = hyun(number, age, buf); //san class로 만들어주세여
 
-        print(std::cout, my_san); // 프린트 해주세여
+        print(std::cout, my_ji); // 프린트 해주세여
 
     }
 
