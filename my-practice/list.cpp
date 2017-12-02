@@ -69,9 +69,9 @@ public:
 
 int main(int argc, char** argv)
 {
-Person p("san");
+Person p("Jihyun");
 std::cout<<p.say_something()<<std::endl;
-Thing *c = new Person("san");
+Thing *c = new Person("Jihyun");
 std::cout<<c->say_something()<<std::endl;
 delete c;
 }
