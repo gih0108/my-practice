@@ -174,4 +174,3 @@ int main(int argc, char** argv)
     ll.erase_contents(10);
     ll.print_list();
     return 0;
-}

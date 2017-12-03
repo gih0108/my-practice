@@ -2,7 +2,7 @@
 #include<iostream>
 
 void swap(int * ptr1, int * ptr2); 
-void swap(char * ptr1, char * ptr2);
+void swap(char * ptr1, char * ptr2);//미리 선언  오버라이딩 
 void swap(double * ptr1, double * ptr2);
 //this line is very important because of call by reference, pointer
 
