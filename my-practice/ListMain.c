@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "ArrayList.h"
-
+#include "ArrayList.c"  
 int main(void)
 {
 	/*** ArrayList�� ���� �� �ʱ�ȭ ***/
@@ -14,7 +14,7 @@ int main(void)
 	LInsert(&list, 33);
 
 	/*** ������ �������� ��ü ���� ***/
-	printf("���� �������� ��: %d \n", LCount(&list));
+	printf("현재 데이터의 수: %d \n", LCount(&list));
 
 	if(LFirst(&list, &data))    // ù ��° ������ ��ȸ
 	{
@@ -39,7 +39,7 @@ int main(void)
 	}
 
 	/*** ���� �� ������ ������ ��ü ���� ***/
-	printf("���� �������� ��: %d \n", LCount(&list));
+	printf("현재 데이터의 수: %d \n", LCount(&list));
 
 	if(LFirst(&list, &data))
 	{
