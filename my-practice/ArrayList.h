@@ -6,13 +6,14 @@
 
 /*** ArrayList�� ���� ****/
 #define LIST_LEN	100
-typedef int LData;
+typedef int LData;//LData에대한 typedef선언
 
-typedef struct __ArrayList
+
+typedef struct __ArrayList//배열기반 리스트를 정의한 구조체
 {
-	LData arr[LIST_LEN];
-	int numOfData;
-	int curPosition;
+	LData arr[LIST_LEN];//리스트의 저장소인 배열
+	int numOfData;//저장된 데이터의 수
+	int curPosition;//데이터 참조위치를 기록
 } ArrayList;
 
 
