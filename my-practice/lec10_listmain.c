@@ -1,6 +1,7 @@
-#include<iostream>
+#include <stdio.h>
 #include "ArrayList.h"
-using namespace std;
+
+
 
 int main(void)
 {
@@ -14,16 +15,16 @@ int main(void)
     LInsert(&list, 22);
     LInsert(&list, 33);
     
-    cout<<"현재 데이터의 수 :" << LCount(&list) << endl;
+    printf("현재 데이터의 수 : %d\n" , LCount(&list));
     
     if(LFirst(&list, &data))
     {
-        cout << data << endl;
+        printf("%d",data);
         
         while(LNext(&list, &data))
-            cout << data <<endl;
+            printf("%d",data);
     }
-    cout << endl;
+    printf("\n\n");
     
     if(LFirst(&list, &data))
     {
@@ -37,16 +38,16 @@ int main(void)
         }
     }
     
-    cout << "현재 데이터의 수 :" <<LCount(&list) <<endl;
+    printf("현재 데이터의 수 : %d\n" ,LCount(&list));
     
     if(LFirst(&list, &data))
     {
-        cout << data <<endl;
+        printf("%d",data);
         
         while(LNext(&list,&data))
-            cout <<data <<endl;
+            printf("%d",data);
     }
-    cout <<endl;
+    printf("\n\n");
     return 0;
     
 }
