@@ -1,8 +1,8 @@
 #ifndef __ARRAY_LIST_H__
 #define __ARRAY_LIST_H__
 
-#define TRUE	1
-#define FALSE	0
+#define TRUE	1//'참'을 표한하기 위한 매크로 정의
+#define FALSE	0//'거짓'을 표현하지 위한 매크로 정의
 
 /*** ArrayList�� ���� ****/
 #define LIST_LEN	100
