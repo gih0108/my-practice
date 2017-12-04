@@ -14,7 +14,7 @@
 
 
 
-// Project San
+// Project hyun
 
 class hyun
 
@@ -171,7 +171,7 @@ int main(int argc, char** argv)
 
     {
 
-        print(fout, **iter); // *iter = San*
+        print(fout, **iter); // *iter = hyun*
 
     }
 
