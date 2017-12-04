@@ -6,7 +6,7 @@
 
 /*** ArrayList�� ���� ****/
 #define LIST_LEN	100
-typedef int LData;//LData에대한 typedef선언
+typedef int LData;//LData에대한 typedef선언, 리스트에 int형 데이터의 저장을 위한 선언
 
 
 typedef struct __ArrayList//배열기반 리스트를 정의한 구조체
@@ -18,7 +18,7 @@ typedef struct __ArrayList//배열기반 리스트를 정의한 구조체
 
 
 /*** ArrayList�� ���õ� ������ ****/
-typedef ArrayList List;
+typedef ArrayList List;//List는 배열 기반 리스트임
 
 void ListInit(List * plist);//초기화
 void LInsert(List * plist, LData data);//데이터의 저장
