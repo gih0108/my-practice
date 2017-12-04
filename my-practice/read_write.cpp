@@ -126,7 +126,7 @@ int main(int argc, char** argv)
 
     
 
-    San var_san = San(10, 20, "San Jung");
+    hyun var_ji = hyun(10, 20, "Ji hyun");
 
  */
 
@@ -213,7 +213,7 @@ int main(int argc, char** argv)
 
         
 
-        hyun my_ji = hyun(number, age, buf); //san class로 만들어주세여
+        hyun my_ji = hyun(number, age, buf); //hyun class로 만들어주세여
 
         print(std::cout, my_ji); // 프린트 해주세여
 
@@ -227,7 +227,7 @@ int main(int argc, char** argv)
 
     std::stringstream sstream;
 
-    print(sstream, var_san);
+    print(sstream, var_ji);
 
     const char* c_var = sstream.str().c_str();
 
