@@ -30,9 +30,14 @@ public:
 
 int main()
 {
+    /*
     Person *p1 = new Student;
     Person *p2 = new Undergraduate;
     Student *p3 = new Undergraduate;
+    */
+    Person * p1 = new Person;
+    Person * p2 = new Student;
+    Person * p3 = new Undergraduate;
     
     p1 ->Sleep();
     p2 ->Sleep();
