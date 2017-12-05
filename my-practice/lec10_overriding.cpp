@@ -24,6 +24,7 @@ public:
 int main()
 {
     Child child;
-    child.print();
+    //child.print();
+    child.print(3);
     return 0;
 }
