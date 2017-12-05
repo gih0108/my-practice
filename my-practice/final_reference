@@ -1,0 +1,40 @@
+함수 오버로딩? 함수명은 같은데, parameter가 다를 때도 처리해주는 것 : 각 case마다 func을 구성시키면되 
+함수 parameter로 &값이 들어오면 func(int* x) 형식으로 받아야된다. Return 값 말고도 외부의 original값을 변형
+다른 scope에서 정의된 함수 overload 되지 않는다 
+
+new / delete 동적할당 int*array = new int[size]. & int*ptr = new int /// , delete []array & delete ptr
+나머진 malloc과 같아. (for 안에 arr[i] =new int[size2]) - 차원배열
+What happens when new can find no store to allocate  By default, the allocator throws a bad_alloc exception
+n차원 동적할당할 때, delete도 위와 같은 순으로 (delete []array[i];)
+
+
+Class 클래스가 없다면 같은 기능을 하는 함수(동물농장에 동물들이 운다)를 객체마다 매번 새로 만들어줘야한다.
+	Program with case : 동물 타입에 따라 procedure을 지정해주는 것은 프로그래머가 할 일 . Programmer should know what kind of animals is picked, 각 동물에 맞는 procedure을 전부 지정해줘야함
+	caseless Program: 프로그래머는 무엇이 들어오는지, 알 필요가 없고. 각각 새로 지정해줘야할 필요도없다
+Limitation in C for data abstraction and encapsulation…  C : Procedural-Oriented / Procedure + Data structure
+C++ : Object-Oriented   uses objects and their interactions to design applications and computer programs
+.class의 구성 1. Class - Defines the abstract characteristics of a thing(data+method) 2. Object – 객체 (데이터)
+3. Instance – 메모리 공간에 구현된 실체(객체), state(The set of values of the attributes of a particular object)
+4. Method – function, behavior 	정의  class_name instance_name;
+멤버 이니셜라이저 : 클래스 내의 변수 초기화, 부모 클래스 멤버 변수 초기화, !생성자의 몸체부분보다 먼저 실행됨
+human(char* _name,int _age,char* _hobby):name(_name),age(_age),hobby(_hobby){}
+Encapsulation – class 안의 function 내용들은 외부로부터 숨김. ( 사용자는 사용 interface만 알면 됨)
+– To separate an interface from an implementation that are likely to change in future
+– Allowing classes’ changes to be made more easily without changes to interface   어떻게? Public private protected	접근제어지시자
+polymorphism - Allow values of different data types to be handled using a uniform interface 
+Function name 하나로 various한 data type을 받을 수 있다(가장 비슷한 걸 찾음). -> 코드 가독성 올라감
+Inheritance - Super-class: virtual function , Sub-classes: actual functions with dynamic binding
+ 내려갈수록 (subprogram) More specialized (overridden(상속된method 재정의), (information)detailed, added)
+Increases reusability by inheritance, 부모 데이터를 상속받는다
+부모 클래스의 함수나 변수를 상속받을 수 있음 
+
+생성자 – 객체의 생성시에 호출, 클래스명과 같다, public 안에 생성자(클래스명)(매개변수) 형식. 함수이기떄문에 오버로딩 가능 , 맴버 변수의 초기화를 진행해줌.
+
+소멸자 – 객체의 소멸시 호출디는 함수,  ~소멸자() 형식. 매개변수 없으므로 오버로딩 X 
+
+
+함수의 파라미터로 일반 identifier로 받으려면 함수를 정의할 때 func(int &a, int &b)이런식으로 받으면 된다
+
+int main(default:void) ,  int main(int argc, char *argv[]) 
+argc =argument count *argv[] =argument vector,address of strings , 1st argument = command name
+
