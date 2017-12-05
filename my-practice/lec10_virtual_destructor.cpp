@@ -7,11 +7,11 @@ class Parent{
 public:
     Parent(char* _familyName){
         familyName=new char[strlen(_familyName)+1];
-        strcpy(familyName, _familyName)
+        strcpy(familyName, _familyName);
     }
     ~Parent(){
         cout << "~Parent()" <<endl;
-        delete FamilyName;
+        delete familyName;
     }
     virtual void PrintName(){
         cout << familyName <<",";
@@ -48,3 +48,5 @@ delete parent;
 
 return 0;
 }
+
+//주석달기!
