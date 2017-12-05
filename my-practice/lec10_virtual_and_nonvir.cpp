@@ -28,8 +28,12 @@ public:
 
 int main(void)
 {
+
     Parent father;
     Child son;
+    
+    father.vpr() -> vpr.parent;
+    father.nvpr() -> nvpr.parent;
     
     Parent *par_pt = &son;
 }
