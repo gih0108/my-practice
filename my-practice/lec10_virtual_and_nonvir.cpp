@@ -37,3 +37,5 @@ int main(void)
     
     Parent *par_pt = &son;
 }
+
+//error
