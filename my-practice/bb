@@ -1,0 +1,50 @@
+Constructor : 생성자 , class member(age, name)을 initialize 해주는 역할 클래스와 같은 이름으로 public안에 초기화해준다. 
+Return 값이 없고 argument로 오버로딩 한다.
+
+Container(int num):contents(num), pNext(NULL){} 처럼 바로 초기화 가능
+
+Destructor : 생성자와 상호배제인 관계, ~class() 처럼 구현함 argument 는 없다 !
+그렇다고 안의 함수가 없다는 것은 아니다. 생성자가 자동으로 호출되듯이 소멸자도 자동
+Static variable 객체끼리 공유하는 variable 0r func , 애한텐 this 노필요
+대신 func들은객체의변수사용X
+Set / Get func ->
+This 포인터 : this->num1 = num1: 지금 이 함수에서의 num1 은 객체의 num1이다..
+New : 객체 포인터 배열 , 동적 초기화 
+Delete : new 이후엔 해제를 해줘야 한다  delete student[i] , delete[] array
+상속 – class student : public Human	(public으로 상속했을땐 private 멤버는 상속 X protected 가능)
+Default copy constructor의 한계   : shallow copy가 되기 때문에 서로 한곳을 가르킨다deep copy constructotr을 만들면 된다
+연산자 오버라이딩 : 객체끼리 + / 등 연산을 가능하게 해주는 FUNC  = 는 default
+바꾸지 못하는 것 1.change act on built_in data type, 
+2.순서 of operator 3.읽기방향 4. Num of operand  5.New = 는 default , default copy constructor(member변수 복사!) 
+
+상속: 실행 시키면 위에 것은 자식 func이 아래것은 부모 func이 실행된다
+만약 부모  func에 virtual 하면 둘다 자식 func이 호출된다 ->
+Pointer 변수의 자료형을 기준으로 보기 때문에. -> parent에 virtual func을 지정해두고 각자 자식 fuc마다 오버라이드 해주면 된다. ,
+순수 가상함수는 자식 class 에서 무조건 재정의 해줘야한다. 
+
+상속이어서 : 부모* = new 자식은 가능하지만(자식의 member들이 부모로 멤버와 shallow copy 된다) = overriding,	    
+자식* = new 부모  는 안된다  부모의 member는 자식의 멤버를 다 채울 수 없기때문에
+ 즉, 자식을 객체를 불러내서 자식의 func을 호출하는 것은 부모의 func을 overriding 하는 것이다
+하지만, 자식에서 설정 안되있는 func(부모엔 되있는)을 자식.func로 불러내면 ERROR가 생긴다 자식 = 부모 X
+자식에서 부모 func을 불러내고 싶으면 ,1.child.Parent::func();  
+
+2. Parent *child = new Child;, child->func (virtual로해결)
+Virtual은 왜써주냐 *포인터로 호출한 객체에서 부모의 func을 쓰지 않도록 방지, 자식의 func을 쓰도록
+
+벡터 : array 같은것 : 메모리 상에 일렬로 죽 연결되어있는거 (추가 제거할려면 메모리 allocation해야됭)
+
+*/			
+포인터로 vector 리스트에 집어넣어서 각자 다른 수행을 가능하게 한다
+생성자 : array랑 비슷해, vector<T>() ,vector<T>(num), vector<T>(size, Tinit)
+함수 : T.empty() : T가 비어있는 지 확인(T F) T.size() : element의 개수를 알려줌, T.capacity() 메모리 사이즈 보여줌 T.push_back(42) : 42를 맨 마지막에 넣음, T[0] = 31 : 0자리에 31 넣음, T.insert(iter position,val) position앞 자리에 val 삽입, T.insert(posi, size_n, val) : n개 만큼의 val을 position 앞에다 삽입,  T.insert(posi,iter start, iter end): Start 부터 end전 까지 들어있는 요소들을 posi 앞에 삽입
+T.at(i) : 인덱스(range 체크) ,T[i] : 인덱스(range 체크X) , T.front() 맨앞 T.back() 맨뒤(범위 체크: 범위벗어난걸예외)
+제거 함수 : v.pop_back() 말그대로 pop, return은 없다 V.clear() 전부 제거, V,erase(iter i) I 포지션의 요소 제거
+v.erase(start , end ) start 부터 end 전까지 제거   //// v.end()는 요소 제일 마지막 한칸 더 뒤 *v.begin()은 요소값
+vector는 제거나 삭제나 항상 같은 time 걸림(n)
+
+리스트 : 링크드 리스트., 포인터가 다음 애를 가르킴. 요소 추가 제거가 벡터보다 용이 
+생성자 : list<T>(), list<T>(size, init) init으로 가득채운 size list , list<T>(const list<T> &name) copy 생성자 
+반복자 선언 : std::list<Class_name*>::iterator iter = veclist.begin()
+l.empty() l.size(), l.push_bacK(21), l.push_fornt(31), l.front():주소값, l.back(), l.begin(): 반복자
+l.pop_back() l.pop_fornt()  l.erase(iter i) l.erase(iter start, iter end)
+*/
