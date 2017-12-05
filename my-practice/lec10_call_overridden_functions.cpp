@@ -15,9 +15,9 @@ public:
     }
 };
 
-int main({
+int main(){
     Child child;
     child.print();
     child.Parent::print();
     return 0;
-})
+}
