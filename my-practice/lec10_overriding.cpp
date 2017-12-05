@@ -10,8 +10,14 @@ public:
 
 class Child:public Parent{
 public:
+/*
     void print(){
         cout << "I'm your son" <<endl;
+    }
+    */
+    void print(int i =1){
+        for(int j=0;j<i;j++)
+            cout << "I'm your son."<<endl;
     }
 };
 
