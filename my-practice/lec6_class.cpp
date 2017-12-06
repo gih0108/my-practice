@@ -42,3 +42,29 @@ void cellphone::input()
     cout << "카메라 장착여부(O/X) :"
     cin >> camera;
 }
+
+void cellphone::print()
+{
+    cout << "상품의 모델명은 " << model << endl;
+    cout << "사품의 회사명은 " << company << endl;
+    cout << "상품의 색상은" << color <<endl;
+    if(power == 'o' || power == 'O')
+    {
+        turnon();
+    }
+    else
+        turnoff();
+    cout << "전원은" << (on==true? "켜져있습니다" : "꺼져있습니다") <<endl;
+    if(camera=='o' || camera =='O')
+    {
+        installon();
+    }
+    else
+        installoff();
+    cout << "카메라는" <<(install==true?"장착되었습니다" :"장착되지 않았습니다") <<endl;
+}
+
+void cellphone::turnon()
+{
+    on=true;
+}
