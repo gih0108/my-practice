@@ -9,7 +9,8 @@ n차원 동적할당할 때, delete도 위와 같은 순으로 (delete []array[i
 
 
 Class 클래스가 없다면 같은 기능을 하는 함수(동물농장에 동물들이 운다)를 객체마다 매번 새로 만들어줘야한다.
-	Program with case : 동물 타입에 따라 procedure을 지정해주는 것은 프로그래머가 할 일 . Programmer should know what kind of animals is picked, 각 동물에 맞는 procedure을 전부 지정해줘야함
+	Program with case : 동물 타입에 따라 procedure을 지정해주는 것은 프로그래머가 할 일 . 
+Programmer should know what kind of animals is picked, 각 동물에 맞는 procedure을 전부 지정해줘야함
 	caseless Program: 프로그래머는 무엇이 들어오는지, 알 필요가 없고. 각각 새로 지정해줘야할 필요도없다
 Limitation in C for data abstraction and encapsulation…  C : Procedural-Oriented / Procedure + Data structure
 C++ : Object-Oriented   uses objects and their interactions to design applications and computer programs

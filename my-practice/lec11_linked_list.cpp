@@ -34,7 +34,7 @@ public:
         }
         else
         {// 2. list가 비어 있지 않는 경우
-            // 따라간다. by San
+            // 따라간다. 
             Container* cur = pHead; //pHead의 member 변수 복사 
             
             while(cur->get_next() != NULL)
@@ -42,9 +42,9 @@ public:
                 cur = cur->get_next();
             }
             
-            // Container 할당 by cbchoi
+            // Container 할당
             Container* temp = new Container(num);
-            // Connect by cbchoi 
+            // Connect 
             cur->set_next(temp); 
         }
     }
