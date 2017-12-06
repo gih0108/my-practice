@@ -22,7 +22,7 @@ public:
     void installoff();
 };
 
-void main(void)
+int main(void)
 {
     cellphone product;
     product.input();
@@ -39,7 +39,7 @@ void cellphone::input()
     cin >> color;
     cout << "전원 상태(O/X) :";
     cin >> power;
-    cout << "카메라 장착여부(O/X) :"
+    cout << "카메라 장착여부(O/X) :";
     cin >> camera;
 }
 
