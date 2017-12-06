@@ -68,3 +68,15 @@ void cellphone::turnon()
 {
     on=true;
 }
+void cellphone::turnoff()
+{
+    on=false;
+}
+void cellphone::installon()
+{
+    install=true;
+}
+void cellphone::installoff()
+{
+    install=false;
+}
