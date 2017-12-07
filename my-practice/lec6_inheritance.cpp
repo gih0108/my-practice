@@ -57,7 +57,7 @@ public:
 
 int main()
 {
-    Student std(18,"이지현","프로그래밍","한동대학교");
+    Student stu(18,"이지현","프로그래밍","한동대학교");
     
     stu.schoolInfo();
     stu.getup();
