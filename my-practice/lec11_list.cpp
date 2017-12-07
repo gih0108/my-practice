@@ -15,9 +15,6 @@ public:
     std::string say_something(){ return m_name; } 
     
 protected:
-
-
-
     std::string m_name;
 };
 
