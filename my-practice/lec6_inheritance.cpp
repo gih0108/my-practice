@@ -9,6 +9,7 @@ private:
     char hobby[20];
 public:
     Human(int _age, char * _name, char * _hobby):age(_age)//멤버 이니셜라이저->바로 초기화를 진행
+    //멤버 이니셜라이저는 생성자의 몸체 부분보다 먼저 실행된다는 특징을 가지고 있음
     {
         strcpy(name, _name);
         strcpy(hobby, _hobby);
