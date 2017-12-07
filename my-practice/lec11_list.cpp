@@ -7,12 +7,20 @@
 class Thing
 {
 public:
-    Thing(std::string name)
-    :m_name(name){ }
+    Thing(std::string name)//생성자 
+    :m_name(name){ }//멤버 이니셜라이저
 public:
-    std::string& get_name(){ return m_name; }
+    std::string& get_name()
+    { 
+        return m_name; 
+        
+    }
     
-    std::string say_something(){ return m_name; } 
+    std::string say_something()
+    { 
+        return m_name; 
+        
+    } 
     
 protected:
     std::string m_name;
