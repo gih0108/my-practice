@@ -46,7 +46,7 @@ void cellphone::input()
 void cellphone::print()
 {
     cout << "상품의 모델명은 " << model << endl;
-    cout << "사품의 회사명은 " << company << endl;
+    cout << "상품의 회사명은 " << company << endl;
     cout << "상품의 색상은" << color <<endl;
     if(power == 'o' || power == 'O')
     {
