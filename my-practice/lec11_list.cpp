@@ -7,7 +7,7 @@
 class Thing
 {
 public:
-    Thing(std::string name)//constructors, string이라는 데이터 타입에 name이라는 변수이름 설정
+    Thing(std::string name)//constructors, string이라는 데이터 타입에 name이라는 변수이름 설정(if using namespace std;->not neccessary std)
     :m_name(name){ }//멤버 이니셜라이저
 public:
     std::string& get_name()//
