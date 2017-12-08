@@ -17,9 +17,9 @@ public:
     void Push(Element elem);
     Element Pop();
 public:
-int max_size;
-int top;
-Element* stack;
+    int max_size;
+    int top;
+    Element* stack;
 }
 
 Stack::Stack(int max_stack_size)
@@ -49,7 +49,7 @@ Stack& Stack::operator=(const Stack& rhs)
         
         if(rhs.top>=0){
             for(int i=0;i<top+1;i++)
-                stack[i]=rhs.stack[i];
+            stack[i]=rhs.stack[i];
         }
     }
     return *this;
