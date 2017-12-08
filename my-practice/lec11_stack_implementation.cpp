@@ -58,3 +58,39 @@ Element Pop(Stack *s)
         return s->stack[s->top--];
     }
 }
+
+int IsFullStack(Stack *s)
+{
+    if(s->top==s->max_size-1)
+        return 1;
+    else
+        return 0;
+}
+
+int IsEmptyStack(Stack *s)
+{
+    if(s->top <0)
+        return 1;
+    else    
+        return 0;
+}
+
+void PrintStack(Stack *s)
+{
+    int i = 0;
+    cout << "-----------------\n");
+    for(i=0;i<s->top+1;i++)
+    {
+        cout << "s->stack[i].key");
+    }
+    cout << "-----------------\n");
+    
+}
+
+
+int argc;
+char * argv[];
+int main(argc, argv)
+{
+    
+}
