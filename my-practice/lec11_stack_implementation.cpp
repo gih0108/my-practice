@@ -88,30 +88,64 @@ bool IsFull()
         return false;
 }
 
-bool IsEmptyStack(Stack *s)
+bool IsEmpty()
 {
-    if(s->top <0)
-        return 1;
+    if(top <0)
+        return true;
     else    
-        return 0;
+        return false;
 }
 
 void PrintStack(Stack *s)
 {
     int i = 0;
-    cout << "-----------------\n");
+    cout << "-----------------\nㅣ";
     for(i=0;i<s->top+1;i++)
     {
-        cout << "s->stack[i].key");
+        cout << "stack[i].key"<<"ㅣ";
     }
-    cout << "-----------------\n");
+    cout << "-----------------\n";
     
 }
 
-
-int argc;
-char * argv[];
-int main(argc, argv)
+int main(int argc, char *argv[])
 {
+    Element elem;
+    Element pop_item;
     
+    Stack my_stack2(0);
+    Stack my_stack(10);
+    
+    elem.key=2;
+    cout<<"Pushed Item:"<<elem.key<<endl;
+    my_stack.Push(elem);
+    my_stack.PrintStack();
+    
+    elem.key=1;
+    cout<<"Pushed Item:"<<elem.key<<endl;
+    my_stack.Push(elem);
+    my_stack.PrintStack();
+    
+    elem.key=3;
+    cout<<"Pushed Item:"<<elem.key<<endl;
+    my_stack.Push(elem);
+    my_stack.PrintStack();
+    
+    pop_item=my_stack.Pop();
+    cout << "Popped Item:" <<pop_item.key<<endl;
+    my_stack.PrintStack();
+    
+    pop_item=my_stack.Pop();
+    cout << "Popped Item:" <<pop_item.key<<endl;
+    my_stack.PrintStack();
+    
+    elem.key=4;
+    cout<<"Pushed Item:"<<elem.key<<endl;
+    my_stack.Push(elem);
+    my_stack.PrintStack();
+    
+    my_stack2=my_stack;
+    my_stack2.PrintStack();
+    
+    return 0;
 }
