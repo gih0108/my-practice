@@ -7,29 +7,29 @@
 class Thing
 {
 public:
-    Thing(std::string name)//생성자 
+    Thing(std::string name)//constructors, string이라는 데이터 타입에 name이라는 변수이름 설정
     :m_name(name){ }//멤버 이니셜라이저
 public:
-    std::string& get_name()
+    std::string& get_name()//
     { 
-        return m_name; 
+        return m_name;
         
     }
     
     std::string say_something()
     { 
-        return m_name; 
+        return m_name;
         
     } 
     
 protected:
-    std::string m_name;
-};
+    std::string m_name; 
+};//클래스 종료
 
 class Person: public Thing //inheritance
 {
 public:
-    Person(std::string name)
+    Person(std::string name) 
     :Thing(name){}
     
     std::string say_something(){ 
@@ -66,6 +66,7 @@ public:
         
     }
     
+    
     std::string say_something(){ 
         std::string contents;
         contents += "I love Programming 2 ";
@@ -73,7 +74,6 @@ public:
         return contents; 
     }
 };
-
 
 int main(int argc, char** argv)
 {

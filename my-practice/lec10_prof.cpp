@@ -35,7 +35,7 @@ class Monster : public Agent
 class Player : public Agent
 {
     public:
-    Monster(int _x, int _y)
+    Player(int _x, int _y)
     :x(_x), y(_y)
     {
         x= _x;
@@ -64,5 +64,5 @@ int main(){
 */
 Agent* mon_list = new Monster[10];
 for(int i = 0 ; i< 10 ; i++)
-    mon_list[i].Move;
+    mon_list[i].Move();
 }

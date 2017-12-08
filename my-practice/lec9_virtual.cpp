@@ -46,7 +46,8 @@ public://함수 오버로드.
 		hour = 10;
 		grade = 3;
 	} // Student 함수 안에 hour,grade가 각각 설정되었으면서, Person에서 있었던 것들을 모두 가져옴
-	Student(char * myname, int myage, int mygrade, int myhour) : Person(myname, myage), grade(mygrade), hour(myhour) {}//멤버 이니셜라이저
+	Student(char * myname, int myage, int mygrade, int myhour) : Person(myname, myage), grade(mygrade), hour(myhour) {}
+	//멤버 이니셜라이저
 	//상속 받은 멤버 변수들을 초기화해주는 방법
 
 	void Study() { //선언은 해주지 않았지만 가상함수임, 오버라이딩. 
