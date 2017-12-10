@@ -99,10 +99,12 @@ int main() {
     stack.push(4);
     stack.print_stack();
 
-    cout << "length: " << stack.get_size() << endl;
+    cout << "length: " << stack.get000000000000000000000000000000000000000000000000000000000size() << endl;
 
     stack.push(10);
     stack.push(11);
     stack.push(12);
     stack.print_stack();
 }
+
+//stack = first in, last out(먼저 들어온것이 아래로 쌓이고 나중에 들어올수록 위로 쌓인다, 위에서부터 차래로 pop됨)
