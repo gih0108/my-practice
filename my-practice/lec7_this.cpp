@@ -23,6 +23,7 @@ private:
    char* ename;
    char dept[10];
    double score;
+   
 public:
    //객체의 이름을 호출.
    Employees();
