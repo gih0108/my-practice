@@ -23,7 +23,7 @@ class LinkedList
 {
 public: 
     LinkedList():pHead(NULL){ }
-    ~LinkedList(){}
+    ~LinkedList(){ }
     
 public:
     void insert_val(int num)

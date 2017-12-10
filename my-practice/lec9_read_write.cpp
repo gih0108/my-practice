@@ -194,6 +194,7 @@ int main(int argc, char** argv)
     fin.getline(buf, 1000); // num //첫번째 줄 넣으세여
 
     int count = atoi(buf); //buf에 들어가 있는걸 count로 숫자로 입력 해주세여 
+    //atoi = char을 int로
 
     
 
