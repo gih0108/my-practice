@@ -18,7 +18,11 @@ public:
    {
       cout << "tes3" << endl;
    }
+   
+   virtual void test4(){}
+   
 };
+
 class BB :public AA
 {
    void test1()
@@ -31,7 +35,7 @@ class BB :public AA
    }
    void test4()
    {
-      cout << "test44" << endl;
+      cout << "tes44" << endl;
    }
 };
 int main()
