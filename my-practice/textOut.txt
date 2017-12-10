@@ -1,2 +1,4 @@
 Obj1: 81
 iObj1: 82,iObj2: 81
+jihyun:I love programming2
+address value:0x602120

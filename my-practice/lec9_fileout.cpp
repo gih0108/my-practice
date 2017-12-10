@@ -8,6 +8,8 @@ using namespace std;
 
 int iObj1;
 int iObj2;
+char arr[] = "I love programming2";
+char*arr1[20];
 
 int main(void)
 {
@@ -18,17 +20,22 @@ int main(void)
     outFile << "Obj1: " << iObj1 << endl;
     iObj2 = iObj1 ++;
     outFile << "iObj1: " << iObj1 << ","<< "iObj2: " << iObj2 << endl;
+    outFile << "jihyun:" << arr << endl;
+    outFile << "address value:" << arr1 << endl;
     outFile.close(); 
     return 0;
 }
 
-
+/*
+int iObj1;
+int iObj2;
 
 ostream& operator<<(ostream &os, const IntClass &iObj1)
 {
     os<<iObj1.getVal();
     return(os);
 }
+
 
 int main(void)
 {
@@ -37,4 +44,4 @@ int main(void)
     
     iObj2 = iObj1 ++;
     cout <<  "iObj1: " << iObj1 << ","<< "iObj2: " << iObj2 << endl;
-}
+}*/
