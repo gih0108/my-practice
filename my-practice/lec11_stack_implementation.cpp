@@ -1,4 +1,6 @@
 #include<iostream>
+#include <cstring>
+
 
 using namespace std;
 
@@ -20,7 +22,7 @@ public:
     int max_size;
     int top;
     Element* stack;
-}
+};
 
 Stack::Stack(int max_stack_size)
 :max_size(max_stack_size),top(-1),stack(NULL)
@@ -149,3 +151,5 @@ int main(int argc, char *argv[])
     
     return 0;
 }
+
+//error
