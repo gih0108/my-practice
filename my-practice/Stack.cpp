@@ -99,7 +99,7 @@ int main() {
     stack.push(4);
     stack.print_stack();
 
-    cout << "length: " << stack.get000000000000000000000000000000000000000000000000000000000size() << endl;
+    cout << "length: " << stack.getsize() << endl;
 
     stack.push(10);
     stack.push(11);

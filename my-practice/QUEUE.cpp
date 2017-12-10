@@ -105,3 +105,6 @@ int main() {
     que.print_queue();
     cout << "length: " << que.get_size() << endl;
 }
+
+//queue : first in , first out(뒤에서 insert되고 앞에서만 remove됨. 즉, 제일 먼저 들어온 것이 위로가고 차래대로 내려가는 구조)
+//큐의 성질을 생각해보면 가장 먼저 들어온 1이 가장 먼저 빠지는 것을 볼 수 있음
