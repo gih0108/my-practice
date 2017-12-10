@@ -15,6 +15,8 @@ public:
 class Stack
 {
 public:
+
+
     Stack(int max_stack_size);
     void Push(Element elem);
     Element Pop();
