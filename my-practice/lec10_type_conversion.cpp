@@ -44,3 +44,9 @@ int main()
     p3 ->Sleep();
     return 0;
 }
+
+/* output : 
+Sleep
+Sleep
+Sleep
+*/

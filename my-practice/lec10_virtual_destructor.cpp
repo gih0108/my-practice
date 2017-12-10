@@ -52,3 +52,12 @@ delete parent;//동적할당 해준 공간 소멸
 return 0;
 }
 
+/*output : 
+KIM,JH
+KIM,HS
+
+~Child()
+~Parent()
+
+~Parent()
+*/
