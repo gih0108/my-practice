@@ -78,8 +78,18 @@ public:
 int main(int argc, char** argv)
 {
 Person p("Jihyun");
+Animal p1("Jimin");
+ICTer p2("Jeong San");
 std::cout<<p.say_something()<<std::endl;
+std::cout<<p1.say_something()<<std::endl;
+std::cout<<p2.say_something()<<std::endl;
 Thing *c = new Person("Jihyun");
+Thing *c1 = new Animal("Jimin");
+Thing *c2 = new ICTer("Jeong San");
 std::cout<<c->say_something()<<std::endl;
+std::cout<<c1->say_something()<<std::endl;
+std::cout<<c2->say_something()<<std::endl;
 delete c;
+delete c1;
+delete c2;
 }
