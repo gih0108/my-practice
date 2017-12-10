@@ -1,16 +1,18 @@
 #include <iostream>
 #include <cstring>
 
-class Container{
+class Container
+{ //Container라는 클래스(그릇)설정
 public:
     Container(int num):contents(num), pNext(NULL){}  
+    //Constructor와 그 parameter, 멤버 이니셜라이저, 각각 num과 NULL로 초기화 
 
 public:
-    void set_contents(int num){ contents = num; }
-    int get_contents() { return contents; }
+    void set_contents(int num){ contents = num; }//num변수에 숫자 받아서 contents에 할당
+    int get_contents() { return contents; }//get_contents는 할당받은 값을 contents라는 변수에 받아서 반환해주는 함수
 
-    void set_next(Container* next){ pNext = next;}
-    Container* get_next() { return pNext; }
+    void set_next(Container* next){ pNext = next;}//Container 그릇의 포인터 변수 next는 pNext로 할당
+    Container* get_next() { return pNext; }//get_next는 그 pNext를 반환
 
 private:
     int contents;
