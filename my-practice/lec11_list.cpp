@@ -7,23 +7,23 @@
 class Thing
 {
 public:
-    Thing(std::string name)//constructors, string이라는 데이터 타입에 name이라는 변수이름 설정(if using namespace std;->not neccessary std)
+    Thing(std::string name)//constructors, string이라는 데이터 타입에 name이라는 변수이름 설정
     :m_name(name){ }//멤버 이니셜라이저
 public:
-    std::string& get_name()//
+    std::string& get_name()//get_name은 string이라는 데이터 타입이 참조하는 값을 반환해주는 함수 기능
     { 
         return m_name;
         
     }
     
-    std::string say_something()
+    std::string say_something()//string이라는 데이터 타입의 say_something 또한 반환해줌
     { 
         return m_name;
         
     } 
     
 protected:
-    std::string m_name; 
+    std::string m_name; //string이라는 데이터 타입의 m_name이라는 변수
 };//클래스 종료
 
 class Person: public Thing //inheritance
