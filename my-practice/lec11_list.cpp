@@ -93,3 +93,5 @@ delete c;
 delete c1;
 delete c2;
 }
+
+//모든 클래스에 Thing을 상속받게 함으로써 이름을 모두 반환시키게끔 만들어 놓음
