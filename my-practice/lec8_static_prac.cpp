@@ -10,7 +10,7 @@ class Test{
     public:
     Test() {
         a = 0;
-    };
+    };//constructor, 변수의 초기화
 
     static void Show(int n, int m){
         cout << "n = :" << n <<","<< "m = :" << m <<endl;
@@ -32,3 +32,8 @@ int main(){
 //8라인에서 static한 클래스 변수 b를 선언하면 b는 메모리의 static영역에 자리 잡게 됨/
 //Test의 변수 a는 stack영역에 자리잡게 됨.
 //나머지 Show 함수 및 기타 코드는 memory의 text영역에 자리잡게 되고 컴파일 시 binding됨
+
+/*output : 
+n = :1,m = :2
+n = :1,m = :2
+*/
