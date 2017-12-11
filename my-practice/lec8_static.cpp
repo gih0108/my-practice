@@ -14,6 +14,9 @@ public:
         strcpy(name, _name);
         age = _age;
         cout << count++ << "th student" <<endl;
+        cout << name << endl;
+        cout << age << endl;
+        
     }
 };
 
@@ -27,3 +30,8 @@ int main()
     
     return 0;
 }
+
+/*output: 
+1th student
+2th student
+*/
