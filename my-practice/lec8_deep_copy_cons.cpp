@@ -72,3 +72,9 @@ copy해주는 것이 아닌 record라는 새로운 "그릇" 따로 선언해서 
 http://wonjayk.tistory.com/256 
 이정도로만 알아두자!
 */
+
+/*output:
+LEE:3458
+LEE:6550
+LEE:3263
+*/
