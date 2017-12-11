@@ -37,3 +37,8 @@ int main(){
     
     return 0;
 }
+
+/*output:
+P1:2,2
+P2:1,1
+*/

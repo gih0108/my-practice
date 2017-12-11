@@ -74,6 +74,7 @@ int math::permutation(int a, int b){
     //cout<<permu<< endl;
     return permu;
 }
+//factorial함수가 permutation함수에서 쓰이기 때문에 static변수로 선언된 변수들은 모두 초기화 과정이 필요하다
 
 int main(){
     int result1,result2,result3;
