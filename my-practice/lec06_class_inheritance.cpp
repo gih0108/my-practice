@@ -11,8 +11,7 @@ class human{
     char* school;
 
     public:
-    human(char* _name,int _age,char* _hobby,char * _school)
-    //멤버 이니셜라이저
+    human(char* _name,int _age,char* _hobby,char * _school):name(_name), age(_age), hobby(_hobby), school(_school){} // 생성자 함수면 함수답게 뭔갈해야 오류가 안뜨지 ( 멤버 이니셜라이져 해둠)
     //멤버 이니셜라이저를 반드시 써야하는 경우: 
     //상수 멤버가 있을 때
     //레퍼런스 멤버가 있을 때
