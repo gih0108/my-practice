@@ -2,11 +2,12 @@
 #include<cstring>
 #include<string>
 using namespace std;
-std::string
+//std::string;
+
 class Printer
 {
 private:
-    str[30];
+    char str[30];//array 변수
 public:
     void SetString(char* s);
     void ShowString();
@@ -15,7 +16,7 @@ public:
 
 void Printer::SetString(char* s)
 {
-    strcpy(str,s);
+    strcpy(str,s);//array 변수->strcpy로 선언
 }
 void Printer::ShowString()
 {
@@ -32,3 +33,8 @@ int main(void)
     pnt.ShowString();
     return 0;
 }
+
+/*output : 
+Hello world
+I love C++
+*/

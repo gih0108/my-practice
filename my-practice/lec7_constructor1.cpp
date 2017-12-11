@@ -50,3 +50,10 @@ int main(void)
     
     return 0;
 }
+
+/*output:
+ce/my-practice (master) $ ./a.out
+0 0
+100 0
+100 200
+*/

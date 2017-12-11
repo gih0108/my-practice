@@ -36,3 +36,11 @@ int main(void)
     
     return(0);
 }
+
+/*output:
+(f f f) version
+14.8
+(i i i) version
+16
+(i f f) ver
+*/

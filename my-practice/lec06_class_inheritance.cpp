@@ -11,7 +11,7 @@ class human{
     char* school;
 
     public:
-    human(char* _name,int _age,char* _hobby,char * _school):human(name, age, hobby, school)
+    human(char* _name,int _age,char* _hobby,char * _school): name(_name), age(_age), hobby(_hobby),school(_school){}
     //멤버 이니셜라이저를 반드시 써야하는 경우: 
     //상수 멤버가 있을 때
     //레퍼런스 멤버가 있을 때
@@ -54,3 +54,7 @@ int main(){
     return 0;
 }
     
+/*output:
+이지현,21,혼자놀기,한동
+공부해라
+*/

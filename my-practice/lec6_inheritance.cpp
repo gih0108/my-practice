@@ -63,7 +63,17 @@ int main()
     stu.getup();
     stu.eat();
     stu.study();
-    stu.sleep();
+    //stu.sleep();
     
     return 0;
 }
+
+/*output:
+이름:이지현
+나이:21
+취미:프로그래밍
+소속 학교:한동대학교
+기상!
+식사!
+공부!
+*/
