@@ -5,7 +5,7 @@ using namespace std;
 class First//기초 클래스
 {
 private:
-    int num1, num2;
+    int num1, num2;//private으로 변수 설정
 public:
     First(int n1=0, int n2=0):num1(n1),num2(n2)
     { }//멤버이니셜라이저, 바로 초기화 =이랑 같은 의미, constructor
@@ -40,7 +40,7 @@ public:
     }
         
     
-    Second& operator=(const Second& ref)//유도 클래스에도 멤버 대 벱머의 복사가 이루어지도록 대입 연산자를 오버로딩
+    Second& operator=(const Second& ref)//유도 클래스에도 멤버 대 멤버의 복사가 이루어지도록 대입 연산자를 오버로딩
     //이 부분을 주석 처리하면  First& operator=(const First& ref)부분만 출력됨
     //결과를 통해서 디폴트 대입 연산자의 특성을 알 수 있음
     {
@@ -64,3 +64,10 @@ int main(void)
 
 //이 코드의 의도 : 유도 클래스의 생성자에는 아무런 명시를 하지 않아도 기초 클래스의 생성자가 호출되지만,
 //유도 클래스의 대입 연산자에는 아무런 명시를 하지 않으면, 기초 클래스의 대입 연산자가 호출되지 않는다
+
+/*output:
+Second& operator =()
+First& operator=()
+111,222
+333,444
+*/
