@@ -8,7 +8,7 @@ class Point
         
     public:
         Point(int x=0, int y=0) : xpos(x) , ypos(y)
-        {}
+        {} //constructor, 멤버 이니셜라이저, 바로 초기화
         
         void ShowPosition() const{
             cout << '[' <<xpos<< "," <<ypos << ']' <<endl;
@@ -21,7 +21,7 @@ class Point
 Point operator +(const Point &pos1, const Point &pos2)//+연산자를 전역함수의 형태로 오버로딩 하였음.
 //Point 클래스는 이 함수에 대해서 friend 선언을 하였으므로, 함수 내에서는 Point 클래스의 private멤버에 접근이 가능함
 {
-    Point pos(pos1.xpos+pos2.xpos, pos1.ypos+pos2.ypos);
+    Point pos(pos1.xpos+pos2.xpos, pos1.ypos+pos2.ypos); 
     return pos;
 }
 
@@ -42,3 +42,9 @@ int main(void)
     pos3.ShowPosition();
     return 0;
 }
+
+/*output:
+[45,15]
+[11,21]
+[56,36]
+*/

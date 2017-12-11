@@ -8,7 +8,7 @@ private:
     int num1, num2;
 public:
     First(int n1=0, int n2=0):num1(n1),num2(n2)
-    { }
+    { }//멤버이니셜라이저, 바로 초기화 =이랑 같은 의미, constructor
         
     void ShowData() 
     {

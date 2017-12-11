@@ -45,3 +45,11 @@ int main(void)
     iObj2 = iObj1 ++;
     cout <<  "iObj1: " << iObj1 << ","<< "iObj2: " << iObj2 << endl;
 }*/
+
+/*output:
+Obj1: 81
+iObj1: 82,iObj2: 81
+jihyun:I love programming2
+address value:0x602120
+(txt파일이 별도로 만들어짐)
+*/

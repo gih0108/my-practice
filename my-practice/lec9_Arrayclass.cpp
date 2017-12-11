@@ -16,7 +16,7 @@ class BoundCheckIntArray
         
         int& operator[] (int idx)//반환형이 참조형
         {
-            if(idx<0 || idx>=arrlen)
+            if(idx < 0 || idx >= arrlen)
             {
                 cout <<"Array index out of bound exception" <<endl;
                 exit(1);
@@ -40,3 +40,12 @@ int main(void)
         cout<<arr[i]<<endl;
     return 0;
 }
+
+/*output:
+11
+22
+33
+44
+55
+Array index out of bound exception
+*/
