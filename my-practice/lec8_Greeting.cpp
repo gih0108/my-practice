@@ -90,3 +90,15 @@ int main(){
     //jihyun.Aging(); //private
     //jihyun.Growing(); //private
 }
+
+/*output:
+Greeting
+Lee Ji Hyun:Hi,What is your name?
+Lee Ji Min:Hello,I am Lee Ji Min
+Lee Ji Min:Hi,What is your name?
+Lee Ji Hyun:Hello,I am Lee Ji Hyun
+Lee Ji Hyun:How old are you?
+Lee Ji Min:I am 21.
+Lee Ji Min:How old are you?
+Lee Ji Hyun:I am 21.
+*/
