@@ -55,6 +55,8 @@ int main(void)
 //실제로 가상함수화 되어있기 때문에 포인터가 가리키고 있는~Second에 먼저가서 삭제되고 상속되어있던 First클래스의
 //~First()가 나중에 삭제되는 것을 알 수 있음(Second 클래스에 First 클래스가 상속되어졌기 때문)
 //만약 소멸자가 가상함수가 아니었다면 포인터 ptr의 자료형이 First이기 때문에 ~First 함수만 실행됨
+
+
 /*output : 
 simple
 simple,complex

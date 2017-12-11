@@ -1,0 +1,26 @@
+메모리 공간이 생성될 때 실행되는 메소드 - Constructor
+메모리 공간이 소멸될 때 실행되는 메소드 - Destructor
+
+동적할당으로 메모리 공간 할당하고 소멸하면 딜리트하면 사라짐 그때 디스트럭터 실행
+
+포인터를 사용하지않고 스칼라?로 구현하면 프로그램이 종료될 때 그때서 destructor호출
+
+static도 잘나옴. 글로벌 변수같은 친구임. 그냥 글러벌은 코드 전체, static은 그 클래스 안에서만 실행, 
+set과 get을 교수님이 좋아함. private으로 선언되어 있는 멤버 변수를 쓸수 있게 바꿔라. 
+->set과 get(set은 퍼블릭에 선언), set은 private으로 선언되어 있는 멤버변수를 public처럼 바꿔줄수 있음.
+-lec9_set&get.cpp
+생성자도 하나의 메소드인데, 하나의 메소드를 선언해주고 안에서 바꿔도 상관은 없다.
+
+static값이 어떻게해서,,,lec8에서 22,23페이지 꼭 알아가기 (시험에 나왔음)
+- lec8_static_members.cpp
+- lec08_static_members.cpp
+
+lec9 7페이지 =operator배웠으니 다른 operator도 구현가능해야함
+19페이지 알아만 두기, 어차피 손코딩이라 이론적인 것이 굳이 필요없음
+- lec9_operationoverloading.cpp
+- lec9_operatoroverloading.cpp
+- lec9_operatorcout.cpp
+- lec9_inheritAssignOperator.cpp
+- lec9_globaloperator.cpp
+
+상속중요함. 다이어그램 주고 상속관계 및 private과 public구현하는 거 나왔었음
