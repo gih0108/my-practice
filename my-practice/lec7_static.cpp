@@ -32,3 +32,8 @@ int main()
    ob1.view();
    ob2.view();
 }
+
+/*output:
+1   25
+5   65
+*/

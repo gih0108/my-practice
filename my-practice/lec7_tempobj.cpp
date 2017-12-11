@@ -39,3 +39,20 @@ int main(void)
 }
 
 //임시객체는 다음 행으로 넘어가면 바로 소멸, 그러나 참조자에 참조되는 임시객체는 바로 소멸 안됨
+
+/*output: 
+create obj: 100
+destroy obj: 100
+**********after make!
+
+create obj: 200
+My num is 200
+destroy obj: 200
+**********after make!
+
+create obj: 300
+**********end of main!
+
+destroy obj: 300
+*/
+

@@ -66,4 +66,21 @@ int main(void)
     delete parr[1];
     delete parr[2];
     return 0;
+
 }
+/*output
+//사용자에게 입력받음
+이름: 이지현 
+나이: 21
+이름: 정산
+나이: 23
+이름: 이시온
+나이: 25
+//
+이름: 이지현,나이: 21
+이름: 정산,나이: 23
+이름: 이시온,나이: 25
+called destructor!
+called destructor!
+called destructor!
+*/

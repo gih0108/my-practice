@@ -40,3 +40,10 @@ int main(void)
     cout << "함수호출 후" << endl;
     return 0;
 }
+
+/*output:
+함수호출 전
+Called SoSimple(const SoSimple& copy)
+num: 7
+함수호출 후
+*/

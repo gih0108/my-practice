@@ -5,7 +5,6 @@ using namespace std;
 
 // 길이정보를 인자로 받아서, 해당 길이의 문자열 저장이 가능한 배열을 생성하고, 
 // 그 배열의 주소 값을 반환하는 함수
-
 char * MakeStrAdr(int len)
 {
     char * str = new char[len]; // 해당 길이의 문자열 저장이 가능한 배열 생성
@@ -20,3 +19,7 @@ int main(void)
     delete []str; // 앞서 할당한 char형 str배열의 소멸
     return 0;
 }
+
+/*output:
+I am so happy~
+*/

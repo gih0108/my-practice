@@ -90,3 +90,13 @@ int main(void)
     run99.ShowCarState();
     return 0;
 }
+
+/*output:
+소유자ID:21600555
+연료량:94%
+현재속도:30km/s
+
+소유자ID:21600555
+연료량:94%
+현재속도:20km/s
+*/

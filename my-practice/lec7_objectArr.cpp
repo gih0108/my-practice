@@ -67,3 +67,23 @@ int main(void)
     parr[2].ShowPersonInfo();
     return 0;
 }
+
+/*output:
+called Person()
+called Person()
+called Person()
+//여기서 사용자에게 입력 받음
+이름: 이지현
+나이: 21
+이름: 정산
+나이: 23
+이름: 이시온
+나이: 25
+//입력받은 값을 출력
+이름: 이지현,나이: 21
+이름: 정산,나이: 23
+이름: 이시온,나이: 25
+called destructor!
+called destructor!
+called destructor!
+*/
