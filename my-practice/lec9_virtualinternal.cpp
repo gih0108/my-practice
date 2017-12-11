@@ -44,6 +44,8 @@ int main(void)
     
     BBB * bptr = new BBB();
     bptr->Func1();
+    //delete bptr;
+    //aptr->Func1();
     return 0;
 }
 

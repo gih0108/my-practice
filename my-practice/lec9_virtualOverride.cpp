@@ -52,3 +52,9 @@ int main(void)
     delete tptr;
     return 0;
 }
+
+/*output : 
+ThirdFunc
+ThirdFunc
+ThirdFunc
+*/

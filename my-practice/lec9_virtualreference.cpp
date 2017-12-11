@@ -75,3 +75,15 @@ int main(void)
 //포인터의 자료형을 기반으로 호출대상을 결정하지 않고, 포인터 변수가 
 //실제로 가리키는 객체를 참조하여 호출의 대상을 결정
 //즉, 포인터 형에 상관없이 포인터가 가리키는 객체의 마지막 오버라이딩 함수를 호출
+
+/*output :
+FirstFunc()
+SecondFunc()
+ThirdFunc()
+Third's SimpleFunc()
+FirstFunc()
+SecondFunc()
+Third's SimpleFunc()
+FirstFunc()
+Third's SimpleFunc()
+*/

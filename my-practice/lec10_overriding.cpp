@@ -28,3 +28,10 @@ int main()
     child.print(3);
     return 0;
 }
+
+/*output : 
+I'm your son.
+I'm your son.
+I'm your son.
+I'm your son.
+*/

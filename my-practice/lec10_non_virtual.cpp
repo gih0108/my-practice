@@ -26,3 +26,8 @@ int main(){
     
     return 0;
 }
+
+/*output : 
+I'm your son.
+I'm your father.
+*/
