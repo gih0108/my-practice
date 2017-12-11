@@ -86,3 +86,10 @@ int main(void)
 
 //c++은 자신에게 맞는 파라미터 수가 있는 함수를 찾아가 오버로딩하려고 한다
 //그런것이 아니라면 가장 마지막에 호출되는 함수를 오버라이딩함
+
+/*output: 
+0       noname  notitle 0
+101     kim     developer       100
+0       lee     notitle 100
+102     noname  sales   50
+*/
