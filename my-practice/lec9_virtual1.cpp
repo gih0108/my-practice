@@ -16,7 +16,7 @@ public:
    }
    virtual void test3()
    {
-      cout << "tes3" << endl;
+      cout << "test3" << endl;
    }
    
    virtual void test4(){}
@@ -35,7 +35,7 @@ class BB :public AA
    }
    void test4()
    {
-      cout << "tes44" << endl;
+      cout << "test44" << endl;
    }
 };
 int main()
@@ -52,3 +52,10 @@ int main()
    delete ob;
    return 0;
 }
+
+/*output:
+test1
+test2
+test33
+test44
+*/

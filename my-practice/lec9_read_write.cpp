@@ -53,7 +53,7 @@ public:
     int get_age() { return m_age; }
 
     char* get_name() { return m_name; }
-
+//get 함수를 통해 private으로 선언한 멤버 변수들 반환
     
 
 private:
@@ -65,7 +65,7 @@ private:
     char* m_name;
 
 };
-
+//set&get 함수 사용
 
 
 void print(std::ostream& os, hyun& ji)

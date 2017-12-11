@@ -15,7 +15,8 @@ class ChangePocketClass
     {}
     
     ChangePocketClass(int q, int d):quarters(q),dimes(d)
-    {}*/
+    {}
+    */
     
     //위와 같은 방법임. 편한대로 해주면 됨
     ChangePocketClass(int q = 0, int d = 0):quarters(q),dimes(d)//메모리 공간 할당과 동시에 초기화 해주는 기능
@@ -44,7 +45,7 @@ class ChangePocketClass
         dimes = val;
     }
     
-    //get function : 변수 값 반환
+    //get function : 변수 값 반환(return)
     int getQuarters()
     {
         return quarters;
@@ -56,6 +57,8 @@ class ChangePocketClass
     }
     
 };
+//set&get function 잘 알아두기 
+//set&get 함수는 public으로 선언되어있지만 멤버 변수들이 private이기 때문에 set&get 함수를 통해 멤버 변수에 접근하도록 해주는 좋은 방법
 
 int  main()
 {
@@ -79,3 +82,9 @@ int  main()
     
     return 0;
 }
+
+/*output : 
+[5,7]
+[3,8]
+[8,15]
+*/
