@@ -30,11 +30,19 @@ void student::print2(void){ //print2함수의 기능(student s2의 이름과 나
 int main() // main함수 
 {
     student s1("LEE", 21);//student 클래스의 s1객체, 각 argument들이 객체 생성과 동시에 초기화
-    student s2("Jeong", 23);//student 클래스의 s2객체, 각 argument들이 객체 생성과 동시에 초기화
+    student s2("San", 23);//student 클래스의 s2객체, 각 argument들이 객체 생성과 동시에 초기화
     
     s1.print1();//s1객체의 print1함수를 불러서 print1함수의 기능인 이름과 나이 출력(s1객체에 있었던 이름과 나이가 출력됨)
     s2.print2();//s2객체의 print2함수를 불러서 print2함수의 기능인 이름과 나이 출력(s2객체에 있었던 이름과 나이가 출력됨)
     
   
     return 0;
+    
 }
+
+/*output : 
+1th student
+2th student
+student s1 :LEE,21
+student s2 :San,23
+*/
