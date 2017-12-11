@@ -66,3 +66,8 @@ Agent* mon_list = new Monster[10];
 for(int i = 0 ; i< 10 ; i++)
     mon_list[i].Move();
 }
+
+/*output : 
+Monster: (1, 1)
+Segmentation fault
+*/

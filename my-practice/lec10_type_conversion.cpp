@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-class Person
+class Person//기초 클래스
 {
 public:
     void Sleep()
