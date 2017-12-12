@@ -8,12 +8,13 @@ class point{
     point(int _x, int _y){
         x = _x; 
         y = _y;
-    }
+    }//constructor
     
     point(const point &pt){
         x = pt.x; 
         y = pt.y;
     }//copy constructor
+    //참조자를 선언해 줌으로써 새로운 공간이 할당되게 만들어줌
     
     void set(int _x, int _y){
         x = _x; 
