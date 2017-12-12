@@ -132,7 +132,6 @@ int main(int argc, char** argv)
 
  
 
-
     std::vector<hyun*> ji_dyn_array = std::vector<hyun*>();
 
     ji_dyn_array.push_back(new hyun(10, 20, "cbchoi"));
