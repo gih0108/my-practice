@@ -7,9 +7,9 @@ void stack::push(int val)
 
 int stack::pop()
 {
-  if(!ll.isEmpty()){
-  return ll.RemoveFromFront_Integer();
-      
+  if(!ll.isEmpty())
+  {
+      return ll.RemoveFromFront_Integer();-
   }
   else{
       std::cout << "Empty" << std::endl;

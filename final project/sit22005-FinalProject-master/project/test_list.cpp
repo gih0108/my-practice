@@ -55,8 +55,11 @@ int main()
             s.push(index++);
         
         s.print(std::cout);
+        std::cout<<s.top()<<std::endl;
         s.pop();
-        s.print(std::cout);    
+        
+        s.print(std::cout);  
+        
     }
     std::cout << std::endl;
     
