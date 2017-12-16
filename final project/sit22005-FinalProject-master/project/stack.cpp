@@ -19,7 +19,7 @@ int stack::pop()
 
 int stack::top()
 {
-    Node* cur = ll.get_head();
+    Node* cur = ll.find_prev_node(nullptr);
     IntegerNode* inode = static_cast<IntegerNode*>(cur);
     return inode->get_value();
 }

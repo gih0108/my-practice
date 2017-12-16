@@ -2,14 +2,14 @@
 
 void queue::push(int val)
 {
-    InsertToFront(val);
+    InsertToBack(val);
 }
 
 int queue::pop()
 {
     if(!isEmpty())
   {
-      return RemoveFromBack_Integer();
+      return RemoveFromFront_Integer();
   }
   else{
       std::cout << "Empty" << std::endl;
@@ -20,7 +20,7 @@ int queue::pop()
 
 int queue::front()
 {
-    Node* cur = pHead;
+    Node* cur = find_prev_node(nullptr);
     IntegerNode* inode = static_cast<IntegerNode*>(cur);
     return inode->get_value();
 }
