@@ -2,17 +2,26 @@
 
 void stack::push(int val)
 {
-    
+    ll.InsertToFront(val);
 }
 
 int stack::pop()
 {
-  
+  if(!ll.isEmpty()){
+  return ll.RemoveFromFront_Integer();
+      
+  }
+  else{
+      std::cout << "Empty" << std::endl;
+      return 0;
+  }
 }
 
 int stack::top()
 {
-   
+    Node* cur = ll.get_head();
+    IntegerNode* inode = static_cast<IntegerNode*>(cur);
+    return inode->get_value();
 }
 
 void stack::print(std::ostream& os)
