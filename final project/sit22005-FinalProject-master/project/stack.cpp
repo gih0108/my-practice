@@ -9,7 +9,7 @@ int stack::pop()
 {
   if(!ll.isEmpty())
   {
-      return ll.RemoveFromFront_Integer();-
+      return ll.RemoveFromFront_Integer();
   }
   else{
       std::cout << "Empty" << std::endl;
