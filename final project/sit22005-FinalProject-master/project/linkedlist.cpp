@@ -311,7 +311,8 @@ void linkedlist::RemoveNode(int val)
                     delete cur;
                 }
             }
-}
+            
+        }
 }
 
 void linkedlist::RemoveNode(char* val)
@@ -342,8 +343,9 @@ void linkedlist::RemoveNode(char* val)
                     cur2->set_next(cur->get_next());
                     
                 }
-            }
-}
+            } 
+            
+        }
 }
 
 Node* linkedlist::find_node(int val)//Node 자료형
