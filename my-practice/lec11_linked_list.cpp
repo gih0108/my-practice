@@ -20,6 +20,8 @@ private:
 };
 
 class LinkedList
+
+
 {
 public: 
     LinkedList():pHead(NULL){ }
