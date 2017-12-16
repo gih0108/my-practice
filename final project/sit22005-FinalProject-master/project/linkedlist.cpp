@@ -184,7 +184,7 @@ char* linkedlist::RemoveFromFront_String()
         strcpy(temp,inode->get_value());
         
         pHead = cur->get_next();
-        delete cur;
+        //delete cur;
     }
     return temp;
 }
