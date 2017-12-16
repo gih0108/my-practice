@@ -288,10 +288,53 @@ void linkedlist::RemoveNode(char* val)
 
 Node* linkedlist::find_node(int val)
 {
-    
+    Node* cur = pHead;
+    IntegerNode* fish = pHead;
+        
+        while(fish != NULL)
+        {
+            if(fish->get_contents() == val)
+                break;
+            else{
+                cur = cur->get_next();
+                fish = fish ->get_next();
+        }
+            
+        }
+        return cur;
+        //return NULL;
+        
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Node* linkedlist::find_node(char* val)
 {
-    
+    Node* cur = pHead;
+        
+        while(cur != NULL)
+        {
+            if(!strcmp(val,cur->get_value())){
+               
+                break;
+                
+            }else{
+                
+                cur = cur->get_next();
+            }
+                
+        }
+        //std::cout<<cur->get_contents_name()<<std::endl;
+        return cur;
 }
