@@ -152,7 +152,7 @@ int linkedlist::RemoveFromBack_Integer()
 
 void linkedlist::InsertToFront(char* val)
 {
-    IntegerNode* inode = new StringNode(val, pHead);
+    StringNode* inode = new StringNode(val, pHead);
     pHead = inode;
 }
 
@@ -198,7 +198,7 @@ char* linkedlist::RemoveFromBack_String()
     {
         if(pHead->get_next() == nullptr)
         {
-            StringNode* inode = static_cast<StringrNode*>(pHead);
+            StringNode* inode = static_cast<StringNode*>(pHead);
            
             int len = strlen(inode->get_value());
             temp = new char[len+1];

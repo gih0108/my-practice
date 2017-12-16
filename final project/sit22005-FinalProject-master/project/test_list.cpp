@@ -31,7 +31,16 @@ int main()
         ll.print(std::cout);    
     }
     std::cout << std::endl;
-    
+    {
+        std::cout << "Test Linked List" << std::endl;
+        linkedlist ls;
+        
+        ls.InsertToFront("da");
+        ls.InsertToFront("ds");
+        
+        ls.print(std::cout);
+        
+    }
     {// Test Case 02
         std::cout << "Test Stack" << std::endl;
         int index = 0;
