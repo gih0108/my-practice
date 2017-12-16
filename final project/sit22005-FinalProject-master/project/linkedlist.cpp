@@ -184,7 +184,6 @@ char* linkedlist::RemoveFromFront_String()
         strcpy(temp,inode->get_value());
         
         pHead = cur->get_next();
-        
         delete cur;
     }
     return temp;
@@ -284,15 +283,71 @@ void linkedlist::InsertNextTo(char* find_val, char* val)
 
 void linkedlist::RemoveNode(int val)
 {
-    
+    Node* cur = find_node(val);
+    if(cur != NULL)
+        {
+            // container가 하나만 있는 경우
+                // Container == pHead
+            if(cur == pHead && cur->get_next() == NULL)
+            {
+                delete cur;
+                pHead = NULL;
+            }
+            else
+            {
+                if(cur == pHead)
+                {
+                    RemoveFromFront_Integer();
+                }
+                else
+                {
+                    Node* cur2 = pHead;
+                    while(cur2->get_next() != cur)
+                    {
+                        cur2 = cur2->get_next();
+                    }
+                    
+                    cur2->set_next(cur->get_next());
+                    delete cur;
+                }
+            }
+}
 }
 
 void linkedlist::RemoveNode(char* val)
 {
-    
+    Node* cur = find_node(val); 
+    if(cur != NULL)
+        {
+            // container가 하나만 있는 경우
+                // Container == pHead
+            if(cur == pHead && cur->get_next() == NULL)
+            {   
+                delete cur;
+                pHead = NULL;
+            }
+            else
+            {
+                if(cur == pHead)
+                {   
+                    RemoveFromFront_String();
+                }
+                else
+                {
+                    Node* cur2 = pHead;
+                    while(cur2->get_next() != cur)
+                    {
+                        cur2 = cur2->get_next();
+                    }
+                    
+                    cur2->set_next(cur->get_next());
+                    
+                }
+            }
+}
 }
 
-Node* linkedlist::find_node(int val)
+Node* linkedlist::find_node(int val)//Node 자료형
 {
     Node* cur = pHead;
     IntegerNode* fish = static_cast<IntegerNode*>(cur);
@@ -322,10 +377,10 @@ Node* linkedlist::find_node(char* val)
         
         while(fish != NULL)
         {   
-            std::cout<<fish->get_value()<<std::endl;
+           // std::cout<<fish->get_value()<<std::endl;
             
             
-            if(!strcmp(val,cur->get_value()))
+            if(!strcmp(val,fish->get_value()))
                 break;
             else{
                 cur = cur->get_next();

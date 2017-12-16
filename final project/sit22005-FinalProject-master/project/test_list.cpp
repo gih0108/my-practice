@@ -18,12 +18,13 @@ int main()
         ll.InsertToFront(index--);
         ll.InsertToFront(index--);
         ll.InsertToFront(index--);
+        ll.print(std::cout);
         //ll.InsertToBack(index--);
         //ll.InsertToBack(index--);
         //ll.InsertToBack(index--);
         //ll.InsertToBack(index--);
         ll.InsertNextTo(8,12);
-        
+        ll.RemoveNode(5);
         ll.print(std::cout);
         
        // for(int i = 0; i <3; i++)
@@ -35,10 +36,14 @@ int main()
     {
         std::cout << "Test Linked List" << std::endl;
         linkedlist ls;
+        ls.InsertToFront("a");
+        ls.InsertToFront("b");
+        ls.InsertToFront("c");
+        ls.print(std::cout);
         
-        ls.InsertToFront("da");
-        ls.InsertToFront("ds");
-        
+        ls.InsertNextTo("b","ko");
+        ls.print(std::cout);
+        ls.RemoveNode("c");
         ls.print(std::cout);
         
     }
