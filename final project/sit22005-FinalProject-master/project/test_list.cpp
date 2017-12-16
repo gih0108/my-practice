@@ -22,14 +22,14 @@ int main()
         //ll.InsertToBack(index--);
         //ll.InsertToBack(index--);
         //ll.InsertToBack(index--);
-        //ll.InsertNextTo(8,12);
+        ll.InsertNextTo(8,12);
         
         ll.print(std::cout);
         
-        for(int i = 0; i <3; i++)
-            ll.RemoveFromBack_Integer();
+       // for(int i = 0; i <3; i++)
+        //    ll.RemoveFromBack_Integer();
         
-        ll.print(std::cout);    
+        //ll.print(std::cout);    
     }
     std::cout << std::endl;
     {
