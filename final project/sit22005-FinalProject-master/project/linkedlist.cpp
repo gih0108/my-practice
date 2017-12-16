@@ -185,6 +185,7 @@ char* linkedlist::RemoveFromFront_String()
         
         pHead = cur->get_next();
         //delete cur;
+        
     }
     return temp;
 }
@@ -286,8 +287,7 @@ void linkedlist::RemoveNode(int val)
     Node* cur = find_node(val);
     if(cur != NULL)
         {
-            // container가 하나만 있는 경우
-                // Container == pHead
+            
             if(cur == pHead && cur->get_next() == NULL)
             {
                 delete cur;
@@ -319,8 +319,7 @@ void linkedlist::RemoveNode(char* val)
     Node* cur = find_node(val); 
     if(cur != NULL)
         {
-            // container가 하나만 있는 경우
-                // Container == pHead
+            
             if(cur == pHead && cur->get_next() == NULL)
             {   
                 delete cur;
@@ -354,15 +353,13 @@ Node* linkedlist::find_node(int val)//Node 자료형
         
         while(fish != NULL)
         {   
-            //std::cout<<fish->get_value()<<std::endl;
-            
-            
+   
             if(fish->get_value() == val)
                 break;
             else{
                 cur = cur->get_next();
                 fish = static_cast<IntegerNode*>(cur);
-        }
+            }
         }
         return cur;
 }
@@ -377,15 +374,13 @@ Node* linkedlist::find_node(char* val)
         
         while(fish != NULL)
         {   
-           // std::cout<<fish->get_value()<<std::endl;
-            
-            
+           
             if(!strcmp(val,fish->get_value()))
                 break;
             else{
                 cur = cur->get_next();
                 fish = static_cast<StringNode*>(cur);
-        }
+            }
         }
         return cur;
 }
