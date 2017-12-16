@@ -268,9 +268,9 @@ void linkedlist::print(std::ostream & os)
 
 void linkedlist::InsertNextTo(int find_val, int val)
 {   
-    node* cur = find_node(find_val);
-    IntegerNode* inode = new IntegerNode(val, pHead);
-    inode->set_next();
+    Node* cur = find_node(find_val);
+    IntegerNode* inode = new IntegerNode(val, cur);
+    inode->set_next(cur->get_next());
 }
 
 void linkedlist::InsertNextTo(char* find_val, char* val)
@@ -291,15 +291,15 @@ void linkedlist::RemoveNode(char* val)
 Node* linkedlist::find_node(int val)
 {
     Node* cur = pHead;
-    IntegerNode* fish = pHead;
+    IntegerNode* fish = static_cast<IntegerNode*>(cur);
         
         while(fish != NULL)
         {
-            if(fish->get_contents() == val)
+            if(fish->get_value() == val)
                 break;
             else{
                 cur = cur->get_next();
-                fish = fish ->get_next();
+                fish = static_cast<IntegerNode*>(fish);
         }
         }
         return cur;
@@ -310,20 +310,5 @@ Node* linkedlist::find_node(int val)
 
 Node* linkedlist::find_node(char* val)
 {
-    Node* cur = pHead;
-        
-        while(cur != NULL)
-        {
-            if(!strcmp(val,cur->get_value())){
-               
-                break;
-                
-            }else{
-                
-                cur = cur->get_next();
-            }
-                
-        }
-        //std::cout<<cur->get_contents_name()<<std::endl;
-        return cur;
+   
 }

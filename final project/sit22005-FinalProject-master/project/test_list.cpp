@@ -18,10 +18,11 @@ int main()
         ll.InsertToFront(index--);
         ll.InsertToFront(index--);
         ll.InsertToFront(index--);
-        ll.InsertToBack(index--);
-        ll.InsertToBack(index--);
-        ll.InsertToBack(index--);
-        ll.InsertToBack(index--);
+        //ll.InsertToBack(index--);
+        //ll.InsertToBack(index--);
+        //ll.InsertToBack(index--);
+        //ll.InsertToBack(index--);
+        //ll.InsertNextTo(8,12);
         
         ll.print(std::cout);
         
