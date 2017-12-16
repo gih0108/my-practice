@@ -18,21 +18,18 @@ int main()
         ll.InsertToFront(index--);
         ll.InsertToFront(index--);
         ll.InsertToFront(index--);
+        ll.InsertToBack(index--);
+        ll.InsertToBack(index--);
+        ll.InsertToBack(index--);
+        ll.InsertToBack(index--);
         ll.print(std::cout);
-        //ll.InsertToBack(index--);
-        //ll.InsertToBack(index--);
-        //ll.InsertToBack(index--);
-        //ll.InsertToBack(index--);
-        ll.InsertNextTo(8,12);
-        ll.RemoveNode(5);
-        ll.print(std::cout);
+        for(int i = 0; i <12; i++)
+            ll.RemoveFromBack_Integer();
         
-       // for(int i = 0; i <3; i++)
-        //    ll.RemoveFromBack_Integer();
-        
-        //ll.print(std::cout);    
+        ll.print(std::cout);    
     }
     std::cout << std::endl;
+    /*
     {
         std::cout << "Test Linked List" << std::endl;
         linkedlist ls;
@@ -46,7 +43,7 @@ int main()
         ls.RemoveNode("c");
         ls.print(std::cout);
         
-    }
+    }*/
     {// Test Case 02
         std::cout << "Test Stack" << std::endl;
         int index = 0;
@@ -55,9 +52,7 @@ int main()
             s.push(index++);
         
         s.print(std::cout);
-        std::cout<<s.top()<<std::endl;
         s.pop();
-        
         s.print(std::cout);  
         
     }
@@ -77,5 +72,25 @@ int main()
     
     std::cout << std::endl;
     
+    {// Additional Points
+        std::cout << "Additional Points" << std::endl;
+        std::cout << "Insert number 1~ 10" << std::endl;
+        linkedlist ad;
+        
+        
+        int index = 10;
+        ad.InsertToFront(index--);
+        ad.InsertToFront(index--);
+        ad.InsertToFront(index--);
+        ad.InsertToFront(index--);
+        ad.InsertToFront(index--);
+        ad.InsertToFront(index--);
+        ad.InsertToFront(index--);
+        ad.InsertToFront(index--);
+        ad.InsertToFront(index--);
+        ad.InsertToFront(index--);
+        
+        ad.print(std::cout);
+    }
     return 0;
 }

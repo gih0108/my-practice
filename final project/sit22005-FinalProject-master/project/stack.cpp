@@ -2,14 +2,14 @@
 
 void stack::push(int val)
 {
-    ll.InsertToFront(val);
+    ll.InsertToBack(val);
 }
 
 int stack::pop()
 {
   if(!ll.isEmpty())
   {
-      return ll.RemoveFromFront_Integer();
+      return ll.RemoveFromBack_Integer();
   }
   else{
       std::cout << "Empty" << std::endl;
