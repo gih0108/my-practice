@@ -10,6 +10,8 @@
 int main(){
     Sales sales;
     sales.Load_stock();
-    sales.print_stock();
+    //sales.print_stock();
+    sales.Sell();
     sales.Store_stock();
+    
 }
