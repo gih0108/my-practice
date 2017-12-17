@@ -1,7 +1,8 @@
-all: LinkedList Queue Stack additionalpoint Stock test_main  
+all: LinkedList Queue Stack additionalpoint test_main  
 	g++ -L. linkedlist.o queue.o stack.o test_list.o  -o test_list
 	g++ -L. linkedlist.o queue.o stack.o additionalpoint.o -o adiitional.point
 	g++ -L. linkedlist.o Stock.o -o Stock
+	
 LinkedList: linkedlist.cpp
 	g++ -std=c++11 -c linkedlist.cpp -o linkedlist.o
 
@@ -13,9 +14,8 @@ Stack: stack.cpp
 	
 additionalpoint: additionalpoint.cpp
 	g++ -std=c++11 -c additionalpoint.cpp -o additionalpoint.o
-	#g++ -std=c++11 -c Stock.cpp -o Stock.o
-Stock: Stock.cpp
 	g++ -std=c++11 -c Stock.cpp -o Stock.o
+
 	
 test_main: test_list.cpp
 	g++ -std=c++11 -c test_list.cpp -o test_list.o
@@ -25,5 +25,5 @@ test_main: test_list.cpp
 clean:
 	rm *.o -f
 	rm test_list
-	rm additionalpoint
+	rm additional.point
 	rm Stock

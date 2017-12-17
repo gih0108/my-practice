@@ -108,7 +108,7 @@ class Sales
     
     
     public:
-        Sales(){std::cout<<"sales now"<<std::endl;}
+        Sales(){std::cout<<"sales now11"<<std::endl;}
         
         void Load_stock(){
             char buf[100];
@@ -145,9 +145,9 @@ class Sales
         }
         
         
-        char* Take_name(){
+        char* take_name(){
             
-            char* input;
+            char input[20];
             char ask;
             char* name;
             
@@ -155,7 +155,7 @@ class Sales
             while(1){
                 
                 std::cout<< "What you want to buy? >>> ";
-                std::cin >> input;
+                std::cin.getline(input,20);
                 std::cout<< input;
                 name = stock_list.search_name(input);
                 std::cout << std::endl;
@@ -183,13 +183,13 @@ class Sales
                 //std::cout<< qty;
                 Node* cur = stock_list.find_node(val);
                 StockItem* inode = static_cast<StockItem*>(cur);
-                if(qty>stock_list.search_quant(input)){
-                     std::cout<< "Sorry we have " << stock_list.search_quant(input) << " items."<<std::endl;
+                if(qty>stock_list.search_quant(val)){
+                     std::cout<< "Sorry we have " << stock_list.search_quant(val) << " items."<<std::endl;
                      std::cout<< "Would you buy? (y/n)>>>";
                      char ans;
                      std::cin >> ans;
                      if(ans == 'y'){
-                         qty = stock_list.search_quant(input);
+                         qty = stock_list.search_quant(val);
                          break;}
                 else{
                     qty = 0;
@@ -198,20 +198,16 @@ class Sales
                     break;
                 }
                 std::cout<< "your qty" << qty <<std::endl;
-                return qty;
-                }}
-            
-            
-            
-            
-            
-            
+               
+            }
+             return qty;
         }
+        
                 
                 
             
         
-        
+        void Sell();
         
         void print_sales();
         
