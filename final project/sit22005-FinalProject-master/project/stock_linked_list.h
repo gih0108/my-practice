@@ -4,7 +4,7 @@
 // header file for file input/output
 #include <fstream>
 #include "linkedlist.h"
-class StockItem : public Node
+class StockItem : public Nodes
 {
 public:
     StockItem() : Node(nullptr,STRING_NODE)
@@ -151,7 +151,7 @@ class Sales
             char ask;
             char* name;
             
-            
+            std::cin.get();
             while(1){
                 
                 std::cout<< "What you want to buy? >>> ";
@@ -178,6 +178,7 @@ class Sales
         }
         
         int take_quant(const char* val){
+                std::cin.get();
                 int qty;
                 while(1){
                 std::cout<< "How many?>>>";

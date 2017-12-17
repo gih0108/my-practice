@@ -10,17 +10,17 @@
 int main(){
     Sales sales;
     while(1){
-        string ch = sales.show_manu();
-        if(ch == "E"){
+        char ch = sales.show_manu();
+        if(ch == 'E'){
             break;
         }
-        else if(ch == "S"){
+        else if(ch == 'S'){
             sales.Sell();
         }
-        else if(ch == "P"){
+        else if(ch == 'P'){
             sales.print_stock();
         }
-        else if(ch == "R"){
+        else if(ch == 'R'){
             sales.print_sales();
         }
         else{
