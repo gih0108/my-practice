@@ -223,15 +223,34 @@ class Sales
                 }
                 
             } 
+        }   
+        
+        void print_sales(){
+            printf("\n                       %s \n\n","SALES REPORT");
+            std::cout << "Name              Price           Quantitiy          Amount "<<std::endl;
             
+            for(Node* cur = sales_hist.get_head(); cur!= nullptr; cur = cur->get_next())
+            {
+                StockItem* node = static_cast<StockItem*>(cur);
+                printf("%-10s         %5d              %5d          %5d\n", node->get_name(), node->get_cost(),node->get_quantity(),node->get_cost() * node->get_quantity());
+                
+            }
             
             
         }
         
-        void print_sales();
-        
         void print_stock(){
-            stock_list.print(std::cout);
+            printf("\n                      %s \n\n","STOCK REPORT");
+            std::cout << "Name              Price           Quantitiy          Amount "<<std::endl;
+            
+            for(Node* cur = stock_list.get_head(); cur!= nullptr; cur = cur->get_next())
+            {
+                StockItem* node = static_cast<StockItem*>(cur);
+                printf("%-10s         %5d              %5d          %5d\n", node->get_name(), node->get_cost(),node->get_quantity(),node->get_cost() * node->get_quantity());
+                
+            }
+            
+            
         }
         
         void show_manu();

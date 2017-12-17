@@ -5,4 +5,4 @@ garlic,70,299
 egg plant,20,1099
 cucumber,30,900
 carrot,60,595
-apple,180,898
+apple,170,898
