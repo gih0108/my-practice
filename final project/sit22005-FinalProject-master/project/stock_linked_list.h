@@ -182,7 +182,6 @@ class Sales
                 while(1){
                 std::cout<< "How many?>>>";
                 std::cin >> qty;
-                //std::cout<< qty;
                 Node* cur = stock_list.find_node(val);
                 StockItem* inode = static_cast<StockItem*>(cur);
                 if(qty>stock_list.search_quant(val)){
@@ -202,7 +201,7 @@ class Sales
                 
                
             }
-            //std::cout<< "your qty" << qty <<std::endl;
+          
              return qty;
         }
         
@@ -273,7 +272,6 @@ class Sales
     
     
 };
-
 
     
 LinkedList::LinkedList()
