@@ -4,7 +4,7 @@
 // header file for file input/output
 #include <fstream>
 #include "linkedlist.h"
-class StockItem : public Nodes
+class StockItem : public Node
 {
 public:
     StockItem() : Node(nullptr,STRING_NODE)
@@ -108,7 +108,9 @@ class Sales
     
     
     public:
-        Sales(){std::cout<<"sales now11"<<std::endl;}
+        Sales(){
+            Load_stock();
+        }
         
         void Load_stock(){
             char buf[100];
@@ -146,12 +148,12 @@ class Sales
         
         
         char* take_name(){
-            
+            //std::cin.get();
             char input[20];
             char ask;
             char* name;
             
-            std::cin.get();
+            
             while(1){
                 
                 std::cout<< "What you want to buy? >>> ";
@@ -178,7 +180,7 @@ class Sales
         }
         
         int take_quant(const char* val){
-                std::cin.get();
+                //std::cin.get();
                 int qty;
                 while(1){
                 std::cout<< "How many?>>>";
@@ -255,18 +257,19 @@ class Sales
         }
         
         char show_manu(){
-            char input;
+            
             std::cout<<std::endl;
             std::cout<< "What would you like to do?" <<std::endl;
             std::cout<<"   S: Sell an item" <<std::endl;
             std::cout<<"   P: Print stock" <<std::endl;
             std::cout<<"   R: Report sales" <<std::endl;
             std::cout<<"   E: Exit" <<std::endl;
-            
+            char input;
             std::cout <<  "Enter your choice (S, P, R, or E)>>>";
             std::cin>>input;
-            
+            std::cin.get();
             return input;
+
             
         }
         
