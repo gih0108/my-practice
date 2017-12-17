@@ -13,8 +13,8 @@ int main(){
     //sales.print_stock();
     //sales.Sell();
     //sales.take_name();
-    std::cout<<  sales.take_name()<<std::endl;
-    std::cout<<  sales.take_quant("apple")<<std::endl;
+    
+    std::cout<<  sales.take_quant(sales.take_name())<<std::endl;
     sales.Store_stock();
     
 }

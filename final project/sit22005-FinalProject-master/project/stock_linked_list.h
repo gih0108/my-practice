@@ -155,19 +155,20 @@ class Sales
             while(1){
                 
                 std::cout<< "What you want to buy? >>> ";
+                std::cin.get();
                 std::cin.getline(input,20);
-                std::cout<< input;
+                //std::cout<< input;
                 name = stock_list.search_name(input);
                 std::cout << std::endl;
                 if(name != NULL){
-                    std::cout<< input;
+                    //std::cout<< input;
                     break;
                 }else{
                 std::cout<< "Sorry, we do not have a stock for " << input << "."<<std::endl;
                 std::cout<< "Do you want to buy other item? (y/n) >>> ";
                 std::cin >> ask;
                 if(ask == 'n'){
-                    input == NULL;
+                    name == NULL;
                     break;
                 }
                 }
@@ -197,17 +198,21 @@ class Sales
                 }else{
                     break;
                 }
-                std::cout<< "your qty" << qty <<std::endl;
+                
                
             }
+            //std::cout<< "your qty" << qty <<std::endl;
              return qty;
         }
         
                 
-                
+        void Sell(){
+            char* fruit;
+            fruit = take_name();
             
-        
-        void Sell();
+            
+            
+        }
         
         void print_sales();
         
