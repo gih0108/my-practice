@@ -136,12 +136,19 @@ class Sales
             
         void Store_stock(){
             std::ofstream fout;
-            fout.open("stock2.txt");
+            fout.open("stock.txt");
 
             for(Node* cur = stock_list.get_head(); cur!= nullptr; cur = cur->get_next())
-            {
+            {   
+                if(cur->get_next()==nullptr){
                 StockItem* fish = static_cast<StockItem*>(cur);
-                fish->WriteToFile(fout);
+                fout << fish->get_name() << ","
+                << fish->get_quantity() << ","
+                << fish->get_cost();
+                
+            }else{
+                StockItem* fish = static_cast<StockItem*>(cur);
+                fish->WriteToFile(fout);}
             }
             fout.close();
         }
