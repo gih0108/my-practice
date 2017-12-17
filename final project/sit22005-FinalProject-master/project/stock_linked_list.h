@@ -210,7 +210,14 @@ class Sales
             char* fruit;
             fruit = take_name();
             if (fruit != NULL){
-                int 
+                int _quant = take_quant(fruit);
+                Node* cur = stock_list.find_node(fruit);
+                StockItem* fish = static_cast<StockItem*>(cur);
+                fish->set_quantity(fish->get_quantity() - _quant);
+                
+                sales_hist.InsertToFront(fruit, _quant, fish->get_cost());
+             
+                
             } 
             
             
