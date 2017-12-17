@@ -12,6 +12,7 @@ int main(){
     while(1){
         char ch = sales.show_manu();
         if(ch == 'E'){
+            sales.Store_stock();
             break;
         }
         else if(ch == 'S'){
