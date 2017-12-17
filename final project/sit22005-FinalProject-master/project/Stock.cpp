@@ -25,7 +25,8 @@ int main(){
             sales.print_sales();
         }
         else{
-            std::cout<<ch<<"?  I beg your pardon"<<std::endl;
+            std::cout<<ch<<"?  I beg your pardon" <<std::endl;
+            std::cout<<std::endl;
         }
     }
 }
