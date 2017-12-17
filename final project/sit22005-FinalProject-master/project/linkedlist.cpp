@@ -218,7 +218,7 @@ char* linkedlist::RemoveFromBack_String()
             
             int len = strlen(inode->get_value());
             temp = new char[len+1];
-            strcpy(temp,inode->get_value());
+            strcpy(temp,inode->get_value ());
 
             delete inode;
         }
