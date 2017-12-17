@@ -253,15 +253,15 @@ class Sales
             
         }
         
-        void show_manu(){
-            
+        char show_manu(){
+            char input;
             std::cout<<std::endl;
             std::cout<< "What would you like to do?" <<std::endl;
             std::cout<<"   S: Sell an item" <<std::endl;
             std::cout<<"   P: Print stock" <<std::endl;
             std::cout<<"   R: Report sales" <<std::endl;
             std::cout<<"   E: Exit" <<std::endl;
-            char input;
+            
             std::cout <<  "Enter your choice (S, P, R, or E)>>>";
             std::cin>>input;
             

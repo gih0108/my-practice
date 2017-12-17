@@ -367,8 +367,6 @@ Node* linkedlist::find_node(int val)//Node 자료형, 부모 클래스이므로 
 }
 
 
-
-
 Node* linkedlist::find_node(char* val)
 {
     Node* cur = pHead;
