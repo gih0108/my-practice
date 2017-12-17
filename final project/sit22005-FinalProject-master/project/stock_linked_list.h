@@ -155,7 +155,7 @@ class Sales
             while(1){
                 
                 std::cout<< "What you want to buy? >>> ";
-                std::cin.get();
+                
                 std::cin.getline(input,20);
                 //std::cout<< input;
                 name = stock_list.search_name(input);
@@ -171,6 +171,7 @@ class Sales
                     name == NULL;
                     break;
                 }
+                std::cin.get();
                 }
             }
             return name;
@@ -211,12 +212,15 @@ class Sales
             fruit = take_name();
             if (fruit != NULL){
                 int _quant = take_quant(fruit);
+                if(_quant!=0){
                 Node* cur = stock_list.find_node(fruit);
                 StockItem* fish = static_cast<StockItem*>(cur);
                 fish->set_quantity(fish->get_quantity() - _quant);
                 
+                std::cout << "item = " << fruit << "; price = " << fish->get_cost() << "; quantity = "<<_quant<< "; amount = "<< fish->get_cost() * _quant <<std::endl;
+                
                 sales_hist.InsertToFront(fruit, _quant, fish->get_cost());
-             
+                }
                 
             } 
             

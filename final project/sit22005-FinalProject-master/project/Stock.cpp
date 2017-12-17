@@ -14,7 +14,8 @@ int main(){
     //sales.Sell();
     //sales.take_name();
     
-    std::cout<<  sales.take_quant(sales.take_name())<<std::endl;
+    //std::cout<<  sales.take_quant(sales.take_name())<<std::endl;
+    sales.Sell();
     sales.Store_stock();
     
 }
