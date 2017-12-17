@@ -348,7 +348,7 @@ void linkedlist::RemoveNode(char* val)
         }
 }
 
-Node* linkedlist::find_node(int val)//Node 자료형
+Node* linkedlist::find_node(int val)//Node 자료형, 부모 클래스이므로 주의
 {
     Node* cur = pHead;
     IntegerNode* fish = static_cast<IntegerNode*>(cur);

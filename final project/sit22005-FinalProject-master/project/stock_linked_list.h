@@ -209,6 +209,9 @@ class Sales
         void Sell(){
             char* fruit;
             fruit = take_name();
+            if (fruit != NULL){
+                int 
+            } 
             
             
             
